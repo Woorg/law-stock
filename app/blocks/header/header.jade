@@ -21,7 +21,7 @@ mixin header()
 							li
 								a(href='/blog/') Новости
 							hr
-				.header-logo.regular-text.flex-container
+				.header__logo.header-logo.regular-text.flex-container
 					a(href='/')
 						svg.ls-logo(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 250 60', style='enable-background:new 0 0 255.1 141.7;', xml:space='preserve')
 							g
@@ -52,7 +52,6 @@ mixin header()
 							| Stock
 					span.header-description Фриланс-биржа юридических услуг
 
-
 				.user.bold-text.flex-container
 					.header__city.h-city Ваш город:
 						a.h-city__link(href="#city") Москва
@@ -77,6 +76,13 @@ mixin header()
 							li.h-user__item
 								a.h-user__link(href="#link") Item
 
+			.header__bottom
+				.header__in
+					a.header__button.button(href="#") Оставить заявку
+
+					.header__triggers
+						button.header__trigger.header__trigger_filter(type="button") Фильтр
+						button.header__trigger.header__trigger_search(type="button") Поиск
 
 		nav
 			.container.flex-container

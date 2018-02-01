@@ -35,11 +35,11 @@ body
 		+r($t)
 			padding-left 5px
 			padding-right 5px
-
 	button
 		margin-bottom 0
 
-
+	#sidebar-container
+		top 58px
 .in
 	margin auto
 	padding-left 15px
@@ -87,7 +87,10 @@ body
 		text-shadow none
 		border-radius 13px
 		box-shadow none
-	&:hover
+	&:hover,
+	&:focus
+		color #000
+		text-decoration none
 		background-color darken(#62e2ce, 10)
 		background-image linear-gradient(to top, darken(rgba(9, 75, 65, 0.3), 10) 0%, darken(rgba(40, 147, 130, 0), 10) 100%), url('../images/general/button-pattern.png')
 		+r($t)

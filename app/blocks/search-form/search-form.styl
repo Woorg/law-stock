@@ -1,6 +1,6 @@
 .search-form
 	position relative
-	&__input
+	.search-form__input
 		padding-top 11px
 		padding-right 56px
 		padding-bottom 13px
@@ -11,8 +11,10 @@
 		background-color #ffffff
 		+placeholder()
 			color #000
-		+r($tL)
-			display none
+		+r($t)
+			display block
+			width 100%
+			box-sizing border-box
 
 	&__submit
 		position absolute

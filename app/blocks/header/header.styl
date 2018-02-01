@@ -1,11 +1,20 @@
 
 .header
-	display block
 	+r($t)
 		// padding-top 6px
 		padding-top 0
+		display block
 	+r($m)
 		padding-top 6px
+	+r($mS)
+		padding-top 0
+	&__logo
+		a
+			+r($t)
+				margin-left 10px
+	.header-description
+		+r($t)
+			line-height 1
 	&__city
 		margin-right 47px
 		+r($t)
@@ -52,9 +61,42 @@
 			font-size 11px
 
 	&__bottom
+		display none
 		+r($t)
+			display block
+			padding-top 4px
+			padding-bottom 4px
 			background #FFF
 			box-shadow 0 3px 5px rgba(0, 0, 0, 0.19)
+	&__button
+		display none
+		+r($t)
+			display inline-block
+			vertical-align top
+	&__triggers
+		display flex
+		justify-content flex-end
+	&__trigger
+		margin-left 10px
+		border none
+		background none
+		text-align left
+		hide-text()
+		opacity 1
+		tr(all .3s ease)
+		&:first-child
+			margin-left 0
+		&:hover
+			opacity .6
+	&__trigger_filter
+		retinaSprite($filter_trigger_group)
+	&__trigger_search
+		retinaSprite($search_group)
+	&__in
+		@extends .in
+		display flex
+		justify-content space-between
+		align-items center
 
 .h-city
 	font-family $pR
@@ -107,8 +149,11 @@
 		background-repeat no-repeat
 		+r($t)
 			margin-right 10px
-			width 30px
-			height 30px
+			width 26px
+			height 26px
+		+r($mS)
+			width 24px
+			height 24px
 	&__pic-icon
 		position absolute
 		z-index 1

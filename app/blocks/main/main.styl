@@ -2,6 +2,9 @@
 	display block
 	min-height 100%
 	background #F3F3F3
+	+r($t)
+		padding-top 58px
+
 	&__w
 		@extends .in
 		padding-top 20px
@@ -9,7 +12,6 @@
 		padding-bottom 20px
 		clr()
 	&__side
-		// margin-right 30px
 		float left
 		width 270px
 		width ratio-percentage(270, 1170)
@@ -18,6 +20,8 @@
 			display none
 			float none
 			width auto
+	&__side_active
+		display block
 	&__content
 		float right
 		width 870px
@@ -27,9 +31,23 @@
 		+r($tL)
 			float none
 			width auto
+	&__title
+		margin-top 0
+		display none
+		font-family $pBld
+		font-size 16px
+		line-height 1.125
+		letter-spacing tracking(5, 16)
+		+r($t)
+			margin-bottom 10px
+			display block
+
 	&__search-form
 		margin-bottom 27px
 		float right
+		+r($t)
+			display none
+			float none
 	&__cards
 		margin-bottom 20px
 		clear both
