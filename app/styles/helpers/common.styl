@@ -1,0 +1,140 @@
+html,
+body
+	height 100%
+
+html
+	position relative
+	min-height 100%
+
+body
+	margin-bottom 0
+	display flex
+	flex-direction column
+
+.main
+	flex 1 0 auto
+
+.page
+	background #fff
+	font-display swap
+	font-family $pR
+	font-weight normal
+	font-size 14px
+	color #000
+	line-height 1.5
+	tr(font-size .3s ease)
+	+rmin($l)
+		margin-bottom 0
+	+rmin($tL)
+		margin-bottom 0
+	+rmin($t)
+		margin-bottom 0
+	+rmin($m)
+		margin-bottom 0
+	.container
+		+r($t)
+			padding-left 5px
+			padding-right 5px
+
+	button
+		margin-bottom 0
+
+
+.in
+	margin auto
+	padding-left 15px
+	padding-right 15px
+	max-width 1200px
+	+r(1200px)
+		max-width 1170px
+	+r($t)
+		padding-left 5px
+		padding-right 5px
+
+.title
+	font-family $pBld
+	font-size 30px
+	// line-height 1.2
+	letter-spacing tracking(-10, 30)
+.button
+	border none
+	padding-top 15px
+	padding-bottom 16px
+	padding-left 50px
+	padding-right 50px
+	display inline-block
+	vertical-align top
+	background-color #62e2ce
+	background-image linear-gradient(to top, rgba(9, 75, 65, 0.3) 0%, rgba(40, 147, 130, 0) 100%), url('../images/general/button-pattern.png')
+	color #000
+	font-family $pBld
+	font-size 18px
+	line-height 1
+	text-shadow 0 1px 0 #fff
+	text-align center
+	border-radius 24px
+	box-shadow 0 3px 7px rgba(0, 0, 0, .5)
+	tr(all .3s ease)
+	+r($t)
+		padding-top 8px
+		padding-right 30px
+		padding-bottom 6px
+		padding-left 30px
+		background-color #62e2ce
+		background-image none
+		font-size 12px
+		font-family $pR
+		text-shadow none
+		border-radius 13px
+		box-shadow none
+	&:hover
+		background-color darken(#62e2ce, 10)
+		background-image linear-gradient(to top, darken(rgba(9, 75, 65, 0.3), 10) 0%, darken(rgba(40, 147, 130, 0), 10) 100%), url('../images/general/button-pattern.png')
+		+r($t)
+			background-image none
+.wysiwyg
+	h1,
+	h2
+		margin-top 0
+		margin-bottom 50px
+		font-size 36px
+		font-weight 700
+		text-transform uppercase
+		line-height 46px
+		letter-spacing tracking(-25, 36)
+		+r($l)
+			margin-bottom 31px
+			font-size 22px
+			line-height 29px
+		+r($t)
+			margin-bottom 19px
+			font-size 14px
+			line-height 18px
+	h3,
+	h4
+		margin-bottom 50px
+		font-size 24px
+		font-weight 700
+		text-transform uppercase
+		letter-spacing tracking(-25, 24)
+		+r($l)
+			margin-bottom 31px
+			font-size 15px
+		+r($t)
+			margin-bottom 19px
+	ul
+		margin-left 0
+		margin-bottom 50px
+
+	p
+		margin-bottom 50px
+		font-size 16px
+		line-height 26px
+		letter-spacing tracking(-25, 16)
+		&:last-child
+			margin-bottom 0
+		+r($l)
+			margin-bottom 31px
+		+r($t)
+			margin-bottom 19px
+			font-size 14px

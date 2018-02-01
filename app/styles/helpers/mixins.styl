@@ -1,9 +1,584 @@
+visuallyhidden()
+	border 0
+	clip rect(0 0 0 0)
+	clip-path inset(50%)
+	height 1px
+	margin -1px
+	overflow hidden
+	padding 0
+	position absolute
+	width 1px
+	white-space nowrap /* 1 */
+
 // Clear the float on any element.
 clearfix()
 	&:after
 		display table
 		clear both
 		content ''
+
+grid($columns, $gutter)
+	$width = 100% /$columns;
+	$marginDeficit =  $gutter * ($columns - 1) / $columns;
+	float: left;
+	width: "calc(%s - %s)" % ($width $marginDeficit);
+	margin-right: $gutter
+
+	&:nth-child({$columns}n)
+		margin-right: 0;
+
+
+// width
+r($width)
+	@media only screen and (max-width: ($width)px)
+		{block}
+
+rmin($width)
+	@media only screen and (min-width: ($width)px)
+		{block}
+
+// height
+rh($height)
+	@media only screen and (max-height: ($height)px)
+		{block}
+
+rhmin($height)
+	@media only screen and (min-height: ($height)px)
+		{block}
+
+t-html()
+	font-family: $body-font
+	font-weight: $body-font-weight
+	color: $body-color
+
+	font-size: $min-font
+	line-height: ($line-height-ratio)em
+	@media (min-width: $min-width)
+		font-size: s('calc( %s + (%s - %s) * ((100vw - %s) / (%s - %s)) )', $min-font, remove-unit($max-font), remove-unit($min-font), $min-width, remove-unit($max-width), remove-unit($min-width))
+	@media (min-width: $max-width)
+		font-size: $max-font
+
+
+
+
+fs($sizeValue = 16)
+	font-size: ($sizeValue + px)
+	font-size: ($sizeValue / 10 + rem)
+
+text-overflow()
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+hover()
+	.no-touch &:hover
+		{block}
+
+.pseudo
+	position: relative
+	&:before, &:after
+		content: " "
+		position: absolute
+		top: 0
+		left: 0
+
+pseudo()
+	@extends .pseudo
+
+coverdiv()
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+cover()
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+bg-size($width = 100%, $height = 100%)
+	background-size: $width $height
+
+// retina, also available as +hdpi
+
+retina()
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+		{block}
+
+box()
+	box-sizing(border-box)
+
+// vertical-align at center
+vcenter()
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+//simple gradient
+g($color1, $color2)
+	background-image: linear-gradient($color1, $color2)
+
+gh($color1, $color2)
+	background-image: linear-gradient(left, $color1, $color2)
+
+
+
+// to use:
+//+font(black, cytiapro-black-webfont)
+
+
+
+//TRANSITION
+
+tr($what)
+	transition $what
+
+hide-text()
+	font 0 / 0 a
+	text-shadow none
+	color transparent
+
+hidetext()
+	hide-text()
+
+// IMPORTANT!!!! REQUIRES SPACES BETWEEN ELEMENTS, NO SUCH STUFF: </li><li>
+
+justify()
+	text-align justify
+	line-height 0
+	font-size 0
+	text-justify newspaper
+	zoom 1
+	text-align-last justify
+	&:after
+		content ""
+		display inline-block
+		width 100%
+		height 0px
+		visibility hidden
+		overflow hidden
+
+vertical()
+	text-align center
+	font-size 0
+	&:before
+		content ""
+		display inline-block
+		vertical-align middle
+		width 0
+		height 100%
+
+clr()
+	&:after
+		content " "
+		display table
+		clear both
+		*zoom 1
+
+placeholder-color($color)
+	&::placeholder
+		color: $color
+
+placeholder()
+	&::placeholder
+		{block}
+gray()
+	filter: grayscale(100%)
+
+gray-half()
+	filter: grayscale(50%)
+
+gray-zero()
+	filter: grayscale(0%)
+
+unselectable()
+	user-select: none
+
+nosel()
+	unselectable()
+
+prevent-text()
+	word-break: break-all
+	word-break: break-word
+	hyphens: auto
+
+font-smoothing($val = antialiased)
+	font-smoothing: $val
+
+selection()
+	& ::selection
+		{block}
+
+sel()
+	selection()
+
+gpu()
+	transform: translate3d(0, 0, 0)
+
+scrollbar()
+	&::-webkit-scrollbar
+		{block}
+
+scrollbar-track()
+	&::-webkit-scrollbar-track
+		{block}
+
+scrollbar-thumb()
+	&::-webkit-scrollbar-thumb
+		{block}
+
+scrollbar-track-piece()
+	&::-webkit-scrollbar-track-piece
+		{block}
+
+//triangle
+arr($width, $height, $bg, $direction)
+	width: 0px
+	height: 0px
+	border-style: solid
+	if $direction == t
+		border-width: 0 $width / 2 + px $height + px $width / 2 + px
+		border-color: transparent transparent $bg transparent
+	if $direction == r
+		border-width: $height / 2 + px 0 $height / 2 + px $width + px
+		border-color: transparent transparent transparent $bg
+	if $direction == b
+		border-width: $height + px $width / 2 + px 0 $width / 2 + px
+		border-color: $bg transparent transparent transparent
+	if $direction == l
+		border-width: $height / 2 + px $width + px $height / 2 + px 0
+		border-color: transparent $bg transparent transparent
+	if $direction == tl
+		border-width: $height + px $width + px 0 0
+		border-color: $bg transparent transparent transparent
+	if $direction == tr
+		border-width: 0 $width + px $height + px 0
+		border-color: transparent $bg transparent transparent
+	if $direction == br
+		border-width: 0 0 $height + px $width + px
+		border-color: transparent transparent $bg transparent
+	if $direction == bl
+		border-width: $width + px 0 0 $height + px
+		border-color: transparent transparent transparent $bg
+
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+
+blur($var)
+	filter: blur($var)
+
+better-blur($radius)
+	-webkit-filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='{$radius}' result='b'/%3E%3CfeMorphology operator='dilate' radius='{$radius}'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a")
+	filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='{$radius}' result='b'/%3E%3CfeMorphology operator='dilate' radius='{$radius}'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a")
+
+
+counter($var, $sep)
+	counter-reset: (list + $var)
+	> li
+		&:before
+			content: counter(list + $var) $sep
+			counter-increment: (list + $var)
+
+f($name, $font-size = null, $letter-spacing = null)
+	$font-family = null
+	if $name == "l"
+		$font-family = "light"
+	font-family: $font-family
+	font-weight: normal
+	if $font-size != null
+		font-size: ($font-size + px)
+	if $letter-spacing != null
+		letter-spacing: ($letter-spacing / 1000 + em)
+
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+// Set margin on left & right
+margin-x($margin)
+	margin-left $margin
+	margin-right $margin
+
+// Set margin on top & bottom
+margin-y($margin)
+	margin-top $margin
+	margin-bottom $margin
+
+// Set pading on left & right
+padding-x($padding)
+	padding-left $padding
+	padding-right $padding
+
+// Set padding on top & bottom
+padding-y($padding)
+	padding-top $padding
+	padding-bottom $padding
+
+// Set one static retina image
+retinaBackground($image, $ext = 'png')
+	background-image url('../images/' + $image + '.' + $ext)
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+		background-image url('../images/' + $image + '@2x.' + $ext)
+
+placeholder()
+	if selector() == "&"
+		error( "placeholder() must be called from a ruleset!" )
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+
+// Set one static retina image
+retinaBackground($image, $ext = 'png') {
+	background-image url('../images/' + $image + '.' + $ext)
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image url('../images/' + $image + '@2x.' + $ext)
+	}
+}
+
+set-font-size(value) {
+	font-size: value; /* add PX (or original value) as backup */
+
+	if (value is inherit) {
+		/* do nothing, "inherit" has no unit */
+	} else {
+		font-size: remify(value)
+	}
+}
+
+remify(value) { /* separate mixin, so it can be used elsewhere */
+	u = unit(value);
+
+	if (u is 'px') {
+		return unit(value/16, 'rem')
+	} else {
+		return unit(value, u)
+	}
+}
+
+// hide-text
+
+hide-text()
+	overflow hidden
+	text-indent 110%
+	white-space nowrap
+
+
+// ellipsis
+
+ellipsis($nowrap = true)
+	text-overflow ellipsis
+	overflow hidden
+		if $nowrap
+			white-space nowrap
+
+
+// percentage
+
+percentage($decimal)
+	( $decimal * 100 ) %
+
+
+ratio-percentage($numerator, $denominator)
+	( $numerator / $denominator  * 100 ) %
+
+ratio($numerator, $denominator)
+	( $numerator / $denominator )
+
+
+// letter-spacing
+
+tracking($val, $base = false)
+	if $base
+		( ( $val * $base ) / 1000 ) px
+	else
+		( $val / 1000 ) em
+
+
+//
+// TRIANGLE
+// ========
+// Creates a CSS triangle by passing a direction, size, and color
+//
+
+
+triangle($point = 'up', $size = 1em, $color = #777)
+
+	if $size is a 'unit' && $color is a 'color'
+
+		if $point == 'up'
+			_triangle-borders({top: '', right: transparent, bottom: solid, left: transparent}, $size, $color)
+		else if $point == 'right'
+			_triangle-borders({top: transparent, right: '', bottom: transparent, left: solid}, $size, $color)
+		else if $point == 'down'
+			_triangle-borders({top: solid, right: transparent, bottom: '', left: transparent}, $size, $color)
+		else if $point == 'left'
+			_triangle-borders({top: transparent, right: solid, bottom: transparent, left: ''}, $size, $color)
+		else if $point == 'up-left'
+			$size = ($size / 2)
+			_triangle-borders({top: solid, right: transparent, bottom: transparent, left: solid}, $size, $color)
+		else if $point == 'up-right'
+			$size = ($size / 2)
+			_triangle-borders({top: solid, right: solid, bottom: transparent, left: transparent}, $size, $color)
+		else if $point == 'down-right'
+			$size = ($size / 2)
+			_triangle-borders({top: transparent, right: solid, bottom: solid, left: transparent}, $size, $color)
+		else if $point == 'down-left'
+			$size = ($size / 2)
+			_triangle-borders({top: transparent, right: transparent, bottom: solid, left: solid}, $size, $color)
+
+
+//
+// TRIANGLE BORDERS
+// This mixin should not be called directly
+//
+
+_triangle-borders($sides, $size, $color)
+
+	width 0
+	height 0
+
+	for $side, $style in $sides
+		if $style == solid
+			border-{$side} $size solid $color
+		else if $style == transparent
+			border-{$side} $size solid transparent
+
+
+
+//
+// INTERNET EXPLORER
+// =================
+//
+
+// Default Variables
+$is-ie ?= false
+$is-ie--version ?= 0
+
+ie($version, $strict = false)
+	if ($is-ie == true)
+		if($strict == true)
+			if ($is-ie--version == $version)
+				{block}
+	else
+		if ($is-ie--version <= $version)
+			{block}
+
+
+
+
+//
+// OPACITY
+// =======
+//
+
+
+// Default Variables
+$is-ie ?= false
+
+opacity($n, $args...)
+	opacity: $n $args
+	if $is-ie
+		$val = round($n * 100)
+		+ie(8, true)
+			-ms-filter: '"alpha(opacity=%s)"' % $val $args
+		+ie(7)
+			filter: 'alpha(opacity=%s)' % $val $args
+
+
+
+//
+// TIMING FUNCTIONS
+// ================
+//
+
+
+// SINE
+$ease-in-sine      = cubic-bezier(0.470,  0.000, 0.745, 0.715)
+$ease-out-sine     = cubic-bezier(0.390,  0.575, 0.565, 1.000)
+$ease-in-out-sine  = cubic-bezier(0.445,  0.050, 0.550, 0.950)
+
+// QUAD
+$ease-in-quad      = cubic-bezier(0.550,  0.085, 0.680, 0.530)
+$ease-out-quad     = cubic-bezier(0.250,  0.460, 0.450, 0.940)
+$ease-in-out-quad  = cubic-bezier(0.455,  0.030, 0.515, 0.955)
+
+// CUBIC
+$ease-in-cubic     = cubic-bezier(0.550,  0.055, 0.675, 0.190)
+$ease-out-cubic    = cubic-bezier(0.215,  0.610, 0.355, 1.000)
+$ease-in-out-cubic = cubic-bezier(0.645,  0.045, 0.355, 1.000)
+
+// QUART
+$ease-in-quart     = cubic-bezier(0.895,  0.030, 0.685, 0.220)
+$ease-out-quart    = cubic-bezier(0.165,  0.840, 0.440, 1.000)
+$ease-in-out-quart = cubic-bezier(0.770,  0.000, 0.175, 1.000)
+
+// QUINT
+$ease-in-quint     = cubic-bezier(0.755,  0.050, 0.855, 0.060)
+$ease-out-quint    = cubic-bezier(0.230,  1.000, 0.320, 1.000)
+$ease-in-out-quint = cubic-bezier(0.860,  0.000, 0.070, 1.000)
+
+// EXPO
+$ease-in-expo      = cubic-bezier(0.950,  0.050, 0.795, 0.035)
+$ease-out-expo     = cubic-bezier(0.190,  1.000, 0.220, 1.000)
+$ease-in-out-expo  = cubic-bezier(1.000,  0.000, 0.000, 1.000)
+
+// CIRC
+$ease-in-circ      = cubic-bezier(0.600,  0.040, 0.980, 0.335)
+$ease-out-circ     = cubic-bezier(0.075,  0.820, 0.165, 1.000)
+$ease-in-out-circ  = cubic-bezier(0.785,  0.135, 0.150, 0.860)
+
+// BACK
+$ease-in-back      = cubic-bezier(0.600, -0.280, 0.735, 0.045)
+$ease-out-back     = cubic-bezier(0.175,  0.885, 0.320, 1.275)
+$ease-in-out-back  = cubic-bezier(0.680, -0.550, 0.265, 1.550)
+
+
+
+/**
+ * Creates a baseline grid based off your $line-height-ratio to help visualize your vertical rhythm grid. You can offset the grid by negative or positive pixels to line it up perfectly with the bottom of your text.
+ *
+ * @param {color} [$color=black] - A color to be lightened and used as the color for the grid.
+ * @param {number} [$px-offset=false] - A positive or negative number of pixels to offset the grid by. Useful for lining the bottom of the gridlines up with your text.
+ *
+ * @example
+ *   grid-overlay(blue, 2)
+ */
+
+
+grid-overlay($color = black, $px-offset = false)
+	body
+		background: linear-gradient(to top, rgba($color, 10%) 5%, white 5%)
+		background-size: 100% ($line-height-ratio)em
+		if $px-offset
+			background-position: 0 unit($px-offset, 'px')
+
+
 
 // Fix no working `-webkit-text-size-adjust: 100%;` in Android.
 fix-text-size-adjust()

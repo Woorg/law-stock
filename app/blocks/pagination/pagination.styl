@@ -1,0 +1,48 @@
+.pagination
+	margin 0
+	margin-bottom 36px
+	padding-right 104px
+	display block
+	text-align center
+	font-size 0
+	+r($l)
+		padding-right 0
+	.pagination__item
+		margin-left 5px
+		display inline-block
+		vertical-align top
+		.pagination__link
+			display block
+			padding 0
+			float none
+			width 15px
+			height 15px
+			border-radius 2px
+			background-color #90a4ae
+			text-decoration none
+			hide-text()
+			tr(all .3s ease)
+			&:hover,
+			&:focus
+				text-decoration none
+		&:nth-child(1)
+			.pagination__link
+				background-color #90a4ae
+				&:hover,
+				&:focus
+					background-color darken(#90a4ae, 10)
+		&:nth-child(2)
+			.pagination__link
+				background-color #ccd4d8
+				&:hover,
+				&:focus
+					background-color darken(#ccd4d8, 10)
+		&:nth-child(3)
+			.pagination__link
+				background-color #dfe3e5
+				&:hover,
+				&:focus
+					background-color darken(#dfe3e5, 10)
+
+		&:first-child
+			margin-left 0

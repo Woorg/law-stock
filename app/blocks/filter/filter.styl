@@ -1,0 +1,85 @@
+.filter
+	display block
+	&__item
+		margin-bottom 15px
+		padding-top 11px
+		padding-right 20px
+		padding-bottom 12px
+		padding-left 22px
+		// width 270px
+		// height 42px
+		border 1px solid #90a4ae
+		background-color #ffffff
+	&__item-title
+		position relative
+		border none
+		display block
+		width 100%
+		background transparent
+		font-family $pBld
+		text-align left
+	&__item-title_active
+		.filter__arrow
+			tr(all .3s ease)
+			transform rotate(180deg)
+	&__arrow
+		position absolute
+		top 50%
+		right 0
+		width 10px
+		height 5px
+		fill #4b616c
+		transform translateY(-50%)
+		tr(all .3s ease)
+
+	&__list
+		margin-top 25px
+		margin-bottom 0
+		display none
+	&__list_active
+		display block
+	&__list-item
+		position relative
+		margin-bottom 10px
+	&__label
+		padding-right 30px
+		display block
+		cursor pointer
+		font-family $pR
+		font-weight normal
+		.filter__checkbox
+			position absolute
+			top 50%
+			right 0
+			margin 0
+			background transparent
+			transform translateY(-50%)
+			&:after,
+			&:before
+				position absolute
+				top 50%
+				right 0
+				content ""
+				border-radius 50%
+				transform translateY(-50%)
+			&:after
+				width 18px
+				height 18px
+				background #FFF
+				border 1px solid #90a4ae
+			&:before
+				visibility hidden
+				top 6px
+				right 4px
+				width 10px
+				height 10px
+				background-color #57c6b4
+
+	&__checkbox
+		&:checked
+			outline none
+			&:before
+				visibility visible
+				z-index 1
+
+

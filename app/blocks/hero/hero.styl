@@ -1,0 +1,31 @@
+.hero
+	display block
+	background url('../images/content/hero-bg.jpg') 50% 0 no-repeat
+	background-size cover
+	+r($t)
+		background #FFF
+		box-shadow 0 3px 5px rgba(0, 0, 0, 0.19)
+	&__in
+		@extends .in
+		padding-top 30px
+		padding-bottom 28px
+		color #FFF
+		text-align center
+		+r($t)
+			padding-top 4px
+			padding-bottom 4px
+			text-align left
+	&__title
+		margin-top 0
+		margin-bottom 8px
+		@extends .title
+		+r($t)
+			display none
+	&__text
+		margin-bottom 13px
+		font-size 16px
+		letter-spacing tracking(-10, 16)
+		display none
+	// &__button
+
+

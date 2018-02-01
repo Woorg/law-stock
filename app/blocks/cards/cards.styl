@@ -1,0 +1,124 @@
+.cards
+	position relative
+	min-height 250px
+	&__empty
+		position absolute
+		top 50%
+		left 50%
+		text-align center
+		transform translate(-50%, -505)
+	&__empty-icon
+		margin-bottom 30px
+		width 128px
+		height 110px
+	&__empty-title
+		font-family $pBld
+		font-size 16px
+		text-transform uppercase
+		letter-spacing tracking(-10, 16)
+	&__list
+		margin-bottom 0
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+	&__item
+		position relative
+		border-bottom 7px solid transparent
+		margin-bottom 19px
+		padding-top 10px
+		padding-right 8px
+		padding-bottom 16px
+		padding-left 16px
+		width 199px
+		// width 25%
+		// min-height 206px
+		min-height 156px
+		box-shadow 0 3px 10px rgba(0, 0, 0, 0.19)
+		border-radius 2px
+		background-color #ffffff
+		letter-spacing tracking(10, 14)
+		+r($l)
+			width 31.3%
+		+r($tL)
+			width 48.4%
+		+r($t)
+			width auto
+	&__item_civil
+		border-bottom 7px solid #ff6161
+	&__item_family
+		border-bottom 7px solid #61b7ff
+	&__item_administrative
+		border-bottom 7px solid #60d9c6
+	&__item_criminal
+		border-bottom 7px solid #5adf50
+	&__item-title
+		position relative
+		margin-bottom 10px
+		padding-left 27px
+		padding-bottom 3px
+		font-family $pBld
+	&__icon
+		position absolute
+		top 50%
+		left 0
+		width 19px
+		height 17px
+		fill #000
+		transform translateY(-50%)
+	&__text
+		margin-bottom 9px
+		max-height 173px
+	&__meta
+		margin-bottom 5px
+		font-size 13px
+		color #727272
+		display flex
+	&__meta-date
+		padding-right 4px
+	// &__meta-time
+	&__bottom
+		display flex
+		align-items center
+		justify-content space-between
+	&__price
+		font-family $pBld
+		font-size 16px
+	&__fav
+		position relative
+		margin-right 6px
+		z-index 2
+		border none
+		background transparent
+		width 17px
+		height 16px
+	&__fav_active
+		.cards__star-active
+			display block
+		.cards__fav-icon
+			display none
+	&__fav-icon
+		display block
+		width 17px
+		height 16px
+		fill #000
+	&__star-active
+		display none
+		width 17px
+		height 16px
+		fill #60d9c6
+		.star_active
+			fill #60d9c6
+
+	&__link
+		position absolute
+		z-index 1
+		top 0
+		left 0
+		right 0
+		bottom -7px
+		// width 100%
+		// height 100%
+
+
+.star_active
+	fill #60d9c6

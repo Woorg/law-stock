@@ -1,0 +1,38 @@
+.search-form
+	position relative
+	&__input
+		padding-top 11px
+		padding-right 56px
+		padding-bottom 13px
+		padding-left 24px
+		width 233px
+		line-height 1
+		border 1px solid #90a4ae
+		background-color #ffffff
+		+placeholder()
+			color #000
+		+r($tL)
+			display none
+
+	&__submit
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		border none
+		padding-left 18px
+		padding-right 18px
+		width 54px
+		background transparent
+		text-indent -9999px
+		opacity 1
+		tr(all .3s ease)
+		&:hover
+			opacity .8
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		fill #000
+		transform translate(-50%, -50%)
+		retinaSprite($search_group)

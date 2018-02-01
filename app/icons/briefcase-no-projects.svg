@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="81px" viewBox="0 0 95 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>briefcase-no-projects</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="briefcase-no-projects" transform="translate(1.000000, 0.000000)" stroke="#201600" fill-rule="nonzero" fill="#F3F3F3">
+            <path d="M66.4,0.5 L26.4,0.5 C23.3,0.5 20.7,3.1 20.7,6.2 L20.7,28.5 C20.7,31.6 23.3,34.2 26.4,34.2 L66.4,34.2 C69.5,34.2 72.1,31.6 72.1,28.5 L72.1,6.2 C72,3.1 69.5,0.5 66.4,0.5 Z M66.8,25.6 C66.8,27.9 64.9,29.8 62.6,29.8 L30.7,29.8 C28.4,29.8 26.5,27.9 26.5,25.6 L26.5,9.1 C26.5,6.8 28.4,4.9 30.7,4.9 L62.6,4.9 C64.9,4.9 66.8,6.8 66.8,9.1 L66.8,25.6 Z" id="Shape"></path>
+            <path d="M87,80.2 L5.7,80.2 C2.6,80.2 0,77.6 0,74.5 L0,18.8 C0,15.7 2.6,13.1 5.7,13.1 L87,13.1 C90.1,13.1 92.7,15.7 92.7,18.8 L92.7,74.5 C92.7,77.6 90.2,80.2 87,80.2 Z" id="Shape"></path>
+            <path d="M0,46.7 L92.7,46.7" id="Shape"></path>
+            <path d="M49.5,53.8 L43.3,53.8 C42,53.8 40.9,52.7 40.9,51.4 L40.9,42.9 C40.9,41.6 42,40.5 43.3,40.5 L49.5,40.5 C50.8,40.5 51.9,41.6 51.9,42.9 L51.9,51.4 C51.9,52.8 50.8,53.8 49.5,53.8 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

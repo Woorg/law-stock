@@ -1,0 +1,923 @@
+.navbar-fixed-shadow
+	box-shadow 0 5px 10px rgba(0, 0, 0, 0.21)
+
+.overlay
+	display none
+	position fixed
+	height 100%
+	width 100%
+	top 0
+	left 0
+	background-color rgba(0, 0, 0, 0.54)
+	will-change opacity
+	z-index 1000
+
+.enable-overlay
+	display block
+
+.disable-scrolling
+	overflow hidden
+
+.main-content
+	background-color #fff
+	padding-top 45px
+
+.regular-text
+	font-family $pR
+
+.bold-text
+	font-family $pBld
+
+.black-text
+	font-family $pB
+
+.ls-input
+	border #9d9c9c solid 1px
+	outline-color #60D9C6
+	padding 8px
+	background-color #000
+	&::placeholder
+		color #fff
+
+@media only screen and (max-width: 992px)
+	.container
+		width 100%
+
+
+header
+	background #000
+	color #fff
+	display flex
+	height 45px
+
+#menuToggle
+	cursor pointer
+	height 20px
+	position relative
+	transform rotate(0deg)
+	transform rotate(0deg)
+	transition .5s ease-in-out
+	transition .5s easeout
+	width 20px
+	span
+		display block
+		margin-bottom 4px
+		position absolute
+		height 1px
+		width 18px
+		background #fff
+		opacity 1
+		left 0
+		transform rotate(0deg)
+		transition .25s ease-in-out
+		transition .25s easeout
+		&:first-child
+			top 5px
+		&:last-child
+			top 13px
+	&.open
+		span
+			&:first-child
+				top 18px
+				width 0
+				left 50%
+			&:nth-child(2)
+				transform rotate(45deg)
+			&:nth-child(3)
+				transform rotate(-45deg)
+			&:last-child
+				top 18px
+				width 0
+				left 50%
+
+#menuToggle span:nth-child(2),
+#menuToggle span:nth-child(3)
+	top 9px
+
+.header-logo
+	a
+		margin-left 15px
+		&:hover
+			text-decoration none
+
+.mobile-logo
+	color #fff
+	font-size 16px
+	span
+		color #60D9C6
+
+.ls-logo
+	width 110px
+	display none
+	.main-color
+		fill white
+	.second-color
+		fill #60D9C6
+
+.header-description
+	display none
+
+.user
+	margin-left auto
+	.notifications
+		font-size 12px
+		margin 0
+
+.notifications
+	.text
+		display none
+
+.avatar
+	margin 0 15px
+
+.user-dropdown
+	display none
+	margin-left 0
+	cursor pointer
+	&:hover
+		color #60D9C6
+
+.mobile-profile
+	color #fff
+	font-size 12px
+	&:hover
+		color #60D9C6
+		text-decoration none
+
+.flex-container
+	display flex
+	align-items center
+
+.ls-btn
+	color white
+	font-size 12px
+	padding 5px 10px
+	cursor pointer
+	&:hover
+		color #60D9C6
+		text-decoration none
+
+.btn-reg
+	border 1px solid #60D9C6
+	border-radius 40px
+	margin-left 15px
+
+.header-numbers
+	color #60D9C6
+
+img
+	&.userpic
+		border-radius 50%
+		margin 4px 0
+		width 30px
+		height 30px
+
+.arrow-icon
+	margin-left 12px
+
+.dropdown-menu
+	background #000
+	& > li
+		& > a
+			color #fff
+			&:hover
+				color #60D9C6
+				background #000
+
+.user-list
+	margin-top 22px
+
+@media only screen  and (min-width: 480px)
+	.mobile-logo
+		display none
+	.ls-logo
+		display inline
+	.notifications
+		.text
+			display inline
+
+@media only screen  and (min-width: 768px)
+	.main-content
+		padding-top 65px
+	header
+		height 65px
+	.ls-logo
+		width 190px
+	.header-description
+		display block
+		font-size 12px
+		// margin-left 30px
+		margin-left 11px
+	.ls-btn
+		padding 10px 30px 10px 30px
+	.btn-reg
+		margin-left 40px
+	.user
+		.notifications
+			font-size 14px
+			margin 0 15px 0 15px
+	img
+		&.userpic
+			width 42px
+			height 42px
+	.avatar
+		margin 0 20px 0 15px
+
+@media only screen  and (min-width: 992px)
+	.main-content
+		padding-top 110px
+	#menuToggle
+		display none
+	.header-logo
+		a
+			margin-left 0
+	.header-description
+		font-size 14px
+	.ls-btn
+		font-size 14px
+	.btn-reg
+		&:hover
+			background #60D9C6
+			color #fff
+	.notifications
+		font-size 14px
+	.user-dropdown
+		display block
+	.mobile-profile
+		display none
+
+nav
+	background-color #d5f5ef
+
+.navigation
+	li
+		margin 0 30px 0 30px
+		&:first-child
+			margin-left 0
+		a
+			color #000
+			font-size 16px
+			height 45px
+			line-height 16px
+
+.navigation li a:hover, .navigation li.active a
+	background-color #60D9C6
+	color #fff
+
+.nav-svg
+	margin-right 10px
+	height 25px
+	width 25px
+
+.fav-count
+	color #60D9C6
+
+.custom-nav-el
+	height 45px
+	margin-left auto
+	padding 0 15px 0 15px
+	a
+		color #000
+		font-size 16px
+		text-decoration none
+
+.custom-nav-el:hover, .custom-nav-el.active
+	background-color #60D9C6
+
+.custom-nav-el:hover .nav-svg .svg-border,
+.active .nav-svg .svg-border
+	fill #fff
+
+.custom-nav-el:hover a, .custom-nav-el:hover .fav-count,
+.active a, .active .fav-count
+	color #fff
+
+.navbar-fixed-top
+	nav
+		display none
+
+@media only screen  and (min-width: 992px)
+	.navbar-fixed-top
+		nav
+			display block
+
+body
+	margin-bottom 460px
+
+footer
+	background-color #000
+	position absolute
+	bottom 0
+	height 460px
+	width 100%
+	.container
+		display flex
+		align-items center
+		flex-direction column
+		margin-top 0
+	.subscribe
+		input
+			padding 8px
+	.footer-logo
+		margin-top 25px
+	.ls-logo
+		display inline
+
+footer .footer-logo, .footer-nav, .contacts, .subscribe
+	text-align center
+	margin 0  0 25px 0
+
+.copyright-text
+	color #9d9c9c
+	text-align center
+	margin-right 0
+
+i
+	&.fa-copyright
+		margin-right 5px
+
+.footer-nav
+	li
+		a
+			color #60D9C6
+			font-size 12px
+			padding 0 0 5px 0
+			&:hover
+				color #fff
+				background-color #000
+
+.separated-flex
+	font-size 12px
+
+.footer-separated
+	display flex
+	color #fff
+	.title
+		margin-bottom 15px
+		font-size 14px
+		letter-spacing tracking(0, 14)
+
+.separator
+	display none
+	margin-right 7px
+
+.flex-column
+	display flex
+	flex-direction column
+
+.separated-width
+	width 270px
+
+.title
+	margin-bottom 15px
+
+@media only screen and (min-width: 768px)
+	body
+		margin-bottom 360px
+	footer
+		height 360px
+		.container
+			display flex
+			align-items flex-start
+			flex-direction row
+			margin-top 50px
+	.copyright-text
+		margin-right 17px
+		text-align right
+	.separated-flex
+		display flex
+		flex-direction column
+		margin-left auto
+		.contacts
+			.flex-column
+				margin-bottom 10px
+	.separator
+		display block
+
+@media only screen and (min-width: 768px)
+	footer .footer-logo, .footer-nav, .contacts, .subscribe
+		text-align left
+		margin 0  0 25px 0
+
+@media only screen and (min-width: 768px)
+	.footer-nav, .contacts, .subscribe
+		margin 0 0 0 60px
+
+@media only screen and (min-width: 992px)
+	.footer-nav
+		li
+			a
+				font-size 14px
+	.separated-flex
+		font-size 14px
+
+@media only screen and (min-width: 1200px)
+	.separated-flex
+		flex-direction row
+		.contacts
+			.flex-column
+				margin-bottom 0
+
+.main-content-flex
+	display flex
+	align-items center
+	justify-content center
+
+.top-image
+	background url("../images/landing/landing_top_image_m.png") no-repeat
+	background-size cover
+	height 350px
+	.container
+		height 350px
+
+.top-content
+	display flex
+	font-size 18px
+	flex-direction column
+	text-align center
+
+.top-heading
+	font-size 48px
+	color #fff
+	margin-top 0
+	span
+		color #60D9C6
+
+.top-motivator
+	color #fff
+	margin-bottom 40px
+
+.top-button
+	background #60D9C6
+	box-shadow 0 2px 5px 0 #575757,
+0 3px 10px 0 #000
+	border 1px solid #60D9C6
+	border-radius 40px
+	color #000
+	padding 17px 70px 17px 70px
+	&:hover
+		color #fff
+
+.landing-item
+	height auto
+	.container
+		height auto
+
+.services
+	background-color #fff
+	.container
+		margin 15px 0 15px 0
+
+.services-content
+	display flex
+	flex-direction column
+	text-align center
+	h3
+		color #000
+		font-size 16px
+		margin 0 0 5px 0
+
+.service-flex
+	display flex
+	flex-direction column
+
+.service-item
+	font-size 18px
+	margin 15px 0 15px
+	&:hover
+		text-decoration none
+
+.picture
+	height 130px
+	width 130px
+	border-radius 50%
+
+.law-picture
+	background url("../images/landing/landing_law.jpg") no-repeat
+	background-size cover
+
+.job-picture
+	background url("../images/landing/landing_job.jpg") no-repeat
+	background-size cover
+
+.news-picture
+	background url("../images/landing/landing_news.jpg") no-repeat
+	background-size cover
+
+.why
+	background-color #e4e4e4
+	.container
+		flex-direction column
+
+.why-content
+	display flex
+	flex-direction column
+	text-align center
+
+.content-title
+	color #000
+	font-size 28px
+	margin 15px 0 15px
+
+.why-item
+	margin 15px 0 15px 0
+	width 200px
+	text-align center
+	h3
+		color #000
+		font-size 14px
+	p
+		color #000
+
+.work
+	.container
+		flex-direction column
+
+.work-content
+	display flex
+	margin-bottom 15px
+	text-align center
+	.work-item
+		&:last-child
+			display block
+
+.work-item
+	&:last-child
+		p
+			color #000
+			width 250px
+	h3
+		color #000
+		font-size 18px
+	.ls-logo
+		display inline
+		width 190px
+		margin-bottom 15px
+		.main-color
+			fill #000
+
+.svg-container
+	background #60D9C6
+	border-radius 50%
+	height 110px
+	width 110px
+	.work-svg
+		display block
+		height 70px
+		margin 0 auto
+		width 70px
+
+.work-item, .work-arrow
+	display none
+	margin auto
+
+@media only screen and (min-width: 480px)
+	.services
+		.container
+			padding 30px 0 30px 0
+	.services-content
+		flex-direction row
+	.service-flex
+		flex-direction row
+	.service-item
+		margin 0 10px
+
+@media only screen and (min-width: 768px)
+	.picture
+		height 171px
+		width 171px
+	.services
+		height 330px
+		.container
+			margin auto
+			padding 0 15px
+			height 330px
+	.services-content
+		h3
+			font-size 18px
+			margin 0 0 25px 0
+	.service-item
+		margin 0 30px
+	.content-title
+		font-size 36px
+		margin 0 0 40px 0
+	.why-item
+		margin 0 15px
+		h3
+			font-size 18px
+	.why
+		height 450px
+		.container
+			height 450px
+	.why-content
+		flex-direction row
+	.work
+		height 510px
+		.container
+			height 510px
+	.work-content
+		flex-direction column
+		margin-bottom 0
+		.service-flex
+			justify-content center
+			&:first-child
+				margin-bottom 20px
+	.service-flex
+		.work-arrow
+			&:last-child
+				display none
+	.work-item
+		margin 0 60px
+		h3
+			width 110px
+
+@media only screen and (min-width: 768px)
+	.work-item, .work-arrow
+		display block
+
+@media only screen and (min-width: 992px)
+	.why-item
+		margin 0 35px
+		width 250px
+	.work-item
+		margin 0 35px
+	.work
+		height 330px
+		.container
+			height 330px
+	.work-content
+		flex-direction row
+		.service-flex
+			&:first-child
+				margin-bottom 0
+	.service-flex
+		.work-arrow
+			&:last-child
+				display block
+
+@media only screen and (min-width : 1200px)
+	.why-item
+		margin 0 65px
+	.work-item
+		margin 0 65px
+
+#sidebar-container
+	position fixed
+	z-index 4
+	overflow auto
+	top 45px
+	left -275px
+	width 265px
+	opacity 0
+	padding 0 15px
+	height 100%
+	background-color #e4e4e4
+	color #343838
+	transition all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91)
+	transition all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91)
+	will-change transform, opacity
+	&.open
+		left 0
+		opacity 1
+
+.sidebar-nav
+	position relative
+	top 45%
+	transform translateY(-50%)
+	transform translateY(-50%)
+	hr
+		border 1px inset
+		margin 15px 0 15px
+	.nav
+		& > li
+			& > a
+				color #000
+				padding 0
+				&:hover
+					background-color #e4e4e4
+		hr
+			&:last-child
+				display none
+
+@media only screen and (min-height : 480px)
+	.sidebar-nav
+		top 40%
+		hr
+			margin 20px 0 20px
+
+@media only screen and (min-height: 768px)
+	.sidebar-nav
+		top 25%
+
+@media only screen and (min-width: 768px)
+	#sidebar-container
+		top 65px
+
+@media only screen and (min-width: 992px)
+	#sidebar-container
+		display none
+
+.modal
+	text-align center
+	padding 0!important
+	&:before
+		content ''
+		display inline-block
+		height 100%
+		vertical-align middle
+		margin-right -4px
+
+.modal-dialog
+	display inline-block
+	text-align left
+	vertical-align middle
+
+.modal-flex
+	display flex
+	label
+		font-weight 400
+
+.modal-content
+	background-color #000
+	opacity 0.9
+
+.modal-body
+	color #fff
+	button
+		&.close
+			color #fff
+			opacity 1
+			float none
+	.top-button
+		box-shadow none
+		padding 8px
+
+.modal-close
+	text-align right
+
+.modal-title
+	justify-content center
+	margin-bottom 15px
+	.ls-logo
+		display block
+		margin 0 0 7px 5px
+
+.modal-full-width
+	width 100%
+
+.modal-body input, button
+	margin-bottom 10px
+
+.modal-input
+	background no-repeat scroll 10px 7px
+	background-size 20px 20px
+	padding-left 40px
+
+#mail-input
+	background-image url("../images/email_input.png")
+
+#username-input
+	background-image url("../images/user_input.png")
+
+#login-pswd, #register-pswd
+	background-image url("../images/lock_input.png")
+
+.control
+	display block
+	position relative
+	padding-left 25px
+	cursor pointer
+	input
+		position absolute
+		z-index -1
+		opacity 0
+		&:checked
+			& ~ .control__indicator
+				border #fff solid 1px
+				background #60D9C6
+				&:after
+					display block
+		&:disabled
+			& ~ .control__indicator
+				background #e6e6e6
+				opacity 0.6
+				pointer-events none
+
+.control__indicator
+	border #9d9c9c solid 1px
+	position absolute
+	top 2px
+	left 0
+	height 15px
+	width 15px
+	&:after
+		content ''
+		position absolute
+		display none
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator
+	background #60D9C6
+
+.control--checkbox
+	.control__indicator
+		&:after
+			left 5px
+			top 2px
+			width 3px
+			height 8px
+			border solid #fff
+			border-width 0 2px 2px 0
+			transform rotate(45deg)
+
+.forget-pswd
+	margin-left auto
+	color #60D9C6
+	&:hover
+		color #60D9C6
+		text-decoration none
+
+.modal-bottom
+	text-align center
+	a
+		color #fff
+		&:hover
+			color #fff
+			text-decoration none
+
+.social-bar
+	border #9d9c9c solid 1px
+	height 40px
+	justify-content center
+	margin 15px 0
+	.social-icon
+		height 25px
+		width 25px
+
+.social-item
+	padding 5px 30px 0
+	&.center
+		border-left #9d9c9c solid 1px
+		border-right #9d9c9c solid 1px
+
+.close-login, .close-register
+	cursor pointer
+
+.login-errors, .register-errors
+	color #60D9C6
+	display none
+	margin-bottom 10px
+
+@media only screen and (min-width: 320px)
+	.modal-dialog
+		width 295px
+
+@media only screen  and (min-width: 768px)
+	.modal-dialog
+		width 417px
+	.modal-body
+		padding 25px
+		.top-button
+			padding 15px
+	.modal-title
+		margin-bottom 20px
+		.ls-logo
+			width 150px
+	.close
+		font-size 35px
+	.ls-input
+		padding 15px
+	.modal-input
+		backgroundy 11px
+		background-size 30px 30px
+		padding-left 60px
+	.control
+		padding-left 40px
+	.control__indicator
+		height 25px
+		top -1px
+		width 25px
+	.control--checkbox
+		.control__indicator
+			&:after
+				left 9px
+				top 2px
+				width 7px
+				height 15px
+	.social-bar
+		height 50px
+		margin 35px 0
+		.social-icon
+			height 30px
+			width 30px
+	.social-item
+		padding 5px 45px 0
+
+@media only screen  and (min-width: 768px)
+	.close-login, .close-register
+		margin-left 15px
+
+@media only screen  and (min-width: 992px)
+	#loginModal, #registerModal
+		font-size 16px
+

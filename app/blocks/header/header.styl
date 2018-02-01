@@ -1,0 +1,173 @@
+
+.header
+	display block
+	+r($t)
+		// padding-top 6px
+		padding-top 0
+	+r($m)
+		padding-top 6px
+	&__city
+		margin-right 47px
+		+r($t)
+			margin-right 4px
+			margin-left 4px
+			font-size 11px
+			line-height 1
+		+r($m)
+			font-size 9px
+
+	&__info-w
+		font-size 0
+	&__info
+		margin-right 28px
+		display inline-block
+		vertical-align top
+		font-size 14px
+		font-weight bold
+		+r($t)
+			// margin-right 0
+			font-size 11px
+			line-height 1
+		+r($m)
+			font-size 9px
+
+		&:last-child
+			margin-right 0
+	&__info-val
+		color #60d9c6
+	&__user
+		margin-left 27px
+		min-width 155px
+		+r($t)
+			margin-left 7px
+			// min-width 115px
+			min-width 30px
+			font-size 11px
+
+	&__fav
+		margin-left auto
+		margin-right 20px
+		+r($m)
+			margin-right 0
+			font-size 11px
+
+	&__bottom
+		+r($t)
+			background #FFF
+			box-shadow 0 3px 5px rgba(0, 0, 0, 0.19)
+
+.h-city
+	font-family $pR
+	&__link
+		position relative
+		display inline-block
+		vertical-align middle
+		color #FFF
+		font-size 14px
+		line-height 1
+		text-decoration dotted
+		+r($t)
+			// margin-right 4px
+			// padding-left 4px
+			font-size 11px
+			line-height 1
+		+r($m)
+			font-size 9px
+		&:after
+			position absolute
+			top 100%
+			left 0
+			width 100%
+			height 0
+			border-top 1px dotted #fff
+			content ""
+			tr(all .3s ease)
+		&:hover
+			color #FFF
+			text-decoration dotted
+			&:after
+				border-top 1px dotted transparent
+
+.h-user
+	position relative
+	&__top
+		font-size 0
+		cursor pointer
+	&__pic,
+	&__name
+		display inline-block
+		vertical-align middle
+	&__pic
+		position relative
+		margin-right 19px
+		width 40px
+		height 40px
+		border-radius 50%
+		background-size cover
+		background-repeat no-repeat
+		+r($t)
+			margin-right 10px
+			width 30px
+			height 30px
+	&__pic-icon
+		position absolute
+		z-index 1
+		top 0
+		right -8px
+		width 17px
+		height 16px
+		fill #fff
+		+r($m)
+			right -3px
+			width 13px
+			height 12px
+	&__name
+		font-size 14px
+		padding-right 26px
+		+r(1200px)
+			padding-right 0
+		+r($t)
+			display none
+			font-size 11px
+	&__arrow
+		position absolute
+		top 50%
+		right 0
+		width 10px
+		height 5px
+		fill #fff
+		transform translateY(-50%)
+		+r($t)
+			display none
+	&__list
+		display none
+
+	// &__item
+
+	// &__link
+
+
+.h-fav
+	font-family $pBld
+	color #000
+	font-size 16px
+	letter-spacing tracking(-10, 16)
+	text-decoration none
+	// line-height 24px
+	&:hover,
+	&:focus
+		color #000
+		text-decoration none
+	&__icon,
+	&__val
+		display inline-block
+		vertical-align middle
+	&__icon
+		margin-top -4px
+		margin-right 11px
+		width 25px
+		height 24px
+		fill #000
+	&__val
+		color #50b8a8
+
