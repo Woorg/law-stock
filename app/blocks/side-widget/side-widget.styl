@@ -1,0 +1,69 @@
+.side-widget
+	padding-left 24px
+	padding-right 24px
+	padding-bottom 24px
+	background-color #ffffff
+	border-radius 2px
+	box-shadow 0 3px 10px rgba(0, 0, 0, 0.19)
+	&__title
+		position relative
+		margin-left -24px
+		margin-top 0
+		padding-top 11px
+		padding-bottom 13px
+		padding-left 25px
+		font-family $pBld
+		font-size 16px
+		letter-spacing -0.16px
+		&:after
+			position absolute
+			top 0
+			left 0
+			content ""
+			width 9px
+			height 39px
+			background-color #60d9c6
+	&__list
+		margin-bottom 0
+		font-size 16px
+		line-height 1.875
+		color #727272
+		letter-spacing 0.16px
+	&__item
+		&:last-child
+			margin-bottom 0
+	&__link
+		text-decoration none
+		color #000
+		&:hover,
+		&:focus
+			color #000
+			text-decoration underline
+	&__w
+		margin-top 15px
+		display flex
+		justify-content space-between
+	&__button
+		padding-left 16px
+		padding-right 16px
+
+	// .side-widget__item
+
+	// .side-widget__link
+
+	.side-widget__icon
+		margin-right 6px
+		display inline-block
+		vertical-align middle
+		width 17px
+		height 16px
+		fill #000
+
+	&.side-widget_act
+		.side-widget__item
+			margin-bottom 20px
+			font-size 14px
+			line-height 1.5
+		.side-widget__link
+			font-size 14px
+			line-height 1

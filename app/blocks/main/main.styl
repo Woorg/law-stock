@@ -4,13 +4,25 @@
 	background #F3F3F3
 	+r($t)
 		padding-top 58px
-
 	&__w
 		@extends .in
 		padding-top 20px
-		padding-top 20px
 		padding-bottom 20px
 		clr()
+	&__w_flip
+		+r($m)
+			padding-left 0
+			padding-right 0
+		.main__side
+			float right
+			+r($t)
+				float none
+		.main__content
+			float left
+			+r($t)
+				float none
+		.main__search-form
+			text-align left
 	&__side
 		float left
 		width 270px
@@ -22,11 +34,12 @@
 			width auto
 	&__side_active
 		display block
+	&__side-widget
+		margin-bottom 18px
 	&__content
 		float right
 		width 870px
 		width ratio-percentage(870, 1170)
-
 		clr()
 		+r($tL)
 			float none
@@ -44,12 +57,29 @@
 
 	&__search-form
 		margin-bottom 27px
-		float right
+		text-align right
 		+r($t)
 			display none
 			float none
 	&__cards
 		margin-bottom 20px
 		clear both
+
+	&__article
+		margin-bottom 25px
+		+r($t)
+			margin-bottom 8px
+	&__case
+		margin-bottom 18px
+		+r($t)
+			margin-bottom 8px
+	&__comments
+		margin-bottom 40px
+		+r($t)
+			margin-bottom 8px
+	&__related
+		margin-bottom 15px
+		margin-bottom 0
+
 
 

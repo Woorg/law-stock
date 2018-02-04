@@ -66,15 +66,16 @@ mixin header()
 								+icon('check', true).h-user__pic-icon
 							.h-user__name Евгения М.
 							+icon('arrow-down', true).h-user__arrow
-						ul.h-user__list
-							li.h-user__item
-								a.h-user__link(href="#link") Item
-							li.h-user__item
-								a.h-user__link(href="#link") Item
-							li.h-user__item
-								a.h-user__link(href="#link") Item
-							li.h-user__item
-								a.h-user__link(href="#link") Item
+						.h-user__w
+							ul.h-user__list
+								li.h-user__item
+									a.h-user__link(href="#link") Мой профиль
+								li.h-user__item
+									a.h-user__link(href="#link") Личные сообщения
+								li.h-user__item
+									a.h-user__link(href="#link") Пополнить счет
+								li.h-user__item
+									a.h-user__link(href="#link") Выход
 
 			.header__bottom
 				.header__in
@@ -84,7 +85,7 @@ mixin header()
 						button.header__trigger.header__trigger_filter(type="button") Фильтр
 						button.header__trigger.header__trigger_search(type="button") Поиск
 
-		nav
+		nav.header__nav
 			.container.flex-container
 				ul.bold-text.navigation.nav.navbar-nav
 					li

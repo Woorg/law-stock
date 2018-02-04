@@ -1,5 +1,7 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
+import 'jquery-mousewheel';
+import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
 // import slick from 'slick-carousel';
 // import 'magnific-popup';
 // import mask from "jquery-mask-plugin";
@@ -176,9 +178,9 @@ import $ from 'jquery';
 
 	$(function() {
 
-		const $cardsFav = $('.cards__fav');
+		const $cardsFav = $('.fav');
 		$cardsFav.on('click', function () {
-			$(this).toggleClass('cards__fav_active');
+			$(this).toggleClass('fav_active');
 		});
 
 		const $filterTitle = $('.filter__item-title');
@@ -188,6 +190,14 @@ import $ from 'jquery';
 		});
 
 
+
+		const $comments = $('.comments__w');
+
+		$comments.mCustomScrollbar({
+			theme: "dark",
+			documentTouchScroll: true,
+			mouseWheelPixels: 200
+		});
 
 		function pageWidget(pages) {
 			var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
@@ -199,7 +209,7 @@ import $ from 'jquery';
 			widgetStilization.prependTo(".widget_wrap");
 		}
 
-		pageWidget(['index', 'index-empty']);
+		pageWidget(['index', 'index-empty', 'case', 'single', 'messages' ]);
 
 	});
 

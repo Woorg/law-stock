@@ -1,0 +1,44 @@
+.fav
+	// position relative
+	margin-right 6px
+	z-index 2
+	border none
+	background transparent
+	width 17px
+	height 16px
+	&_active
+		.fav__active
+			display block
+		.fav__icon
+			display none
+	&_big
+		margin-right 0
+		width 25px
+		height 24px
+		.fav__active,
+		.fav__icon
+			width 25px
+			height 24px
+	&__icon
+		display block
+		width 17px
+		height 16px
+		fill #000
+	&__active
+		display none
+		width 17px
+		height 16px
+		fill #60d9c6
+		.star_active
+			fill #60d9c6
+
+	&__link
+		position absolute
+		z-index 1
+		top 0
+		left 0
+		right 0
+		bottom -7px
+
+	.star_active
+		fill #60d9c6

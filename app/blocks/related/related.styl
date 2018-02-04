@@ -1,0 +1,135 @@
+.related
+	+r($t)
+		padding-left 15px
+		padding-right 15px
+	&__title
+		margin-bottom 13px
+		font-family $pBld
+		font-size 16px
+		text-transform uppercase
+		letter-spacing -0.16px
+	&__list
+		margin-bottom 0
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		flex-grow 1
+		+r($m)
+			justify-content center
+	&__item
+		position relative
+		margin-bottom 25px
+		max-width 290px
+		width 199px
+		min-height 206px
+		border-radius 2px
+		box-shadow 0 0 14px rgba(0, 0, 0, .19)
+		gpu()
+		+r($t)
+			width 48%
+		+r($m)
+			width auto
+		&:hover
+			.related__caption
+				position absolute
+				top 0
+				right 0
+				bottom 0
+				left 0
+				padding-top 20px
+				height 206px
+				background #fff
+				gpu()
+				animation fadeIn
+				animation-duration .3s
+				// tr(all .3s ease)
+			.related__text
+				// position absolute
+				// top 0
+				// right 0
+				// left 0
+				max-height 100%
+				flex-grow 1
+				&:after
+					display none
+
+
+	&__image
+		height 113px
+		object-fit contain
+		overflow hidden
+		img
+			display block
+			object-fit contain
+
+	&__caption
+		position absolute
+		left 0
+		bottom 0
+		padding-top 4px
+		padding-right 14px
+		padding-bottom 4px
+		padding-left 14px
+		// height 96px
+		display flex
+		flex-direction column
+		justify-content space-between
+		background-color #ffffff
+		will-change position
+	&__text
+		position relative
+		margin-bottom 10px
+		display inline-block
+		vertical-align top
+		letter-spacing 0.14px
+		max-height 35px
+		line-height 1.4
+		overflow hidden
+		&:after
+			position absolute
+			bottom -2px
+			// right 3px
+			right auto
+			content '...'
+
+
+	&__cat
+		position relative
+		padding-left 26px
+		font-family $pBld
+	&__cat-icon
+		position absolute
+		top 50%
+		left 0
+		width 19px
+		height 17px
+		fill #000000
+		transform translateY(-50%)
+	&__date
+		color #727272
+		letter-spacing 0.13px
+	&__link
+		position absolute
+		z-index 1
+		top 0
+		left 0
+		right 0
+		bottom 0
+
+
+
+@keyframes fadeIn
+	0%
+		opacity 0
+
+	100%
+		opacity 1
+
+@keyframes fadeInUp
+	0%
+		opacity 0
+		transform translateY(20px)
+
+	100%
+		opacity 1
+		transform translateY(0)

@@ -16,9 +16,11 @@ mixin filter()
 				li.filter__list-item
 					label.filter__label Судебные дела
 						input.filter__checkbox(type="checkbox", value="", name="")
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Документы
 						input.filter__checkbox(type="checkbox", value="", name="" checked)
+						.filter__checkbox-icon
 		.filter__item
 			button.filter__item-title(type="button") По отрасли
 				+icon('arrow-down', true).filter__arrow
@@ -26,26 +28,70 @@ mixin filter()
 				li.filter__list-item
 					label.filter__label Гражданское право
 						input.filter__checkbox(type="checkbox", value="", name="")
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Уголовное право
 						input.filter__checkbox(type="checkbox", value="", name="" checked)
-
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Семейное право
 						input.filter__checkbox(type="checkbox", value="", name="")
-
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Административное право
 						input.filter__checkbox(type="checkbox", value="", name="" checked)
-
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Трудовое право
 						input.filter__checkbox(type="checkbox", value="", name="")
-
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Земельное право
 						input.filter__checkbox(type="checkbox", value="", name="" checked)
-
+						.filter__checkbox-icon
 				li.filter__list-item
 					label.filter__label Жилищное право
 						input.filter__checkbox(type="checkbox", value="", name="" checked)
+						.filter__checkbox-icon
+
+mixin filter-single()
+	.filter&attributes(attributes)
+		.filter__item
+			button.filter__item-title(type="button") Все публикации
+				+icon('arrow-down', true).filter__arrow
+		.filter__item
+			button.filter__item-title(type="button") Мои публикации
+				//- +icon('arrow-down', true).filter__arrow
+
+		.filter__item
+			button.filter__item-title(type="button") Все отрасли
+				+icon('arrow-down', true).filter__arrow
+			ul.filter__list.filter__list_active
+				li.filter__list-item
+					label.filter__label Судебная практика
+						input.filter__checkbox(type="checkbox", value="", name="")
+						.filter__checkbox-icon
+				li.filter__list-item
+					label.filter__label Консультации
+						input.filter__checkbox(type="checkbox", value="", name="" checked)
+						.filter__checkbox-icon
+				li.filter__list-item
+					label.filter__label Корпоративное право
+						input.filter__checkbox(type="checkbox", value="", name="")
+						.filter__checkbox-icon
+				li.filter__list-item
+					label.filter__label Гражданское право
+						input.filter__checkbox(type="checkbox", value="", name="" checked)
+						.filter__checkbox-icon
+				li.filter__list-item
+					label.filter__label Уголовное право
+						input.filter__checkbox(type="checkbox", value="", name="")
+						.filter__checkbox-icon
+				li.filter__list-item
+					label.filter__label Семейное право
+						input.filter__checkbox(type="checkbox", value="", name="" checked)
+						.filter__checkbox-icon
+				li.filter__list-item
+					label.filter__label Административное право
+						input.filter__checkbox(type="checkbox", value="", name="" checked)
+						.filter__checkbox-icon

@@ -1,0 +1,15 @@
+include ../icon/icon
+
+mixin rating()
+	+b.rating&attributes(attributes)
+		a.rating__item(href='#star-5', title='Give 5 stars')
+			+icon('star-focus', true).rating__star
+		a.rating__item(href='#star-4', title='Give 4 stars')
+			+icon('star-focus', true).rating__star
+		a.rating__item(href='#star-3', title='Give 3 stars')
+			+icon('star-focus', true).rating__star
+		a.rating__item(href='#star-2', title='Give 2 stars')
+			+icon('star-focus', true).rating__star
+		a.rating__item(href='#star-1', title='Give 1 star')
+			+icon('star-focus', true).rating__star
+

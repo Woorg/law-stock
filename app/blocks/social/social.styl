@@ -1,0 +1,52 @@
+.social
+	&__item
+		display inline-block
+		vertical-align middle
+		line-height 1
+		&:first-child
+			.social__link
+				padding-left 0
+		&:last-child
+			.social__link
+				padding-left 14px
+				border-right 1px solid transparent
+			.social__quant
+				padding-right 0
+
+	&__item_1
+		.social__icon
+			retinaSprite($fb_group)
+	&__item_2
+		.social__icon
+			retinaSprite($vk_group)
+	&__item_3
+		.social__icon
+			retinaSprite($ok_group)
+	&__item_4
+		.social__icon
+			retinaSprite($twitter_group)
+	&__link
+		border-right 1px solid #b1b1b1
+		padding-right 14px
+		padding-left 12px
+		display block
+		font-size 0
+		color #727272
+		&:hover
+			color #727272
+			.social__icon
+				opacity .8
+	&__icon,
+	&__quant
+		display inline-block
+		vertical-align middle
+		line-height 1
+	&__icon
+		tr(all .3s ease)
+	&__quant
+		padding-left 6px
+		font-family $pBld
+		font-size 13px
+		line-height 1.61538461538462
+		&:empty
+			display none

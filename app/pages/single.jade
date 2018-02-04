@@ -1,0 +1,38 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/hero/hero
+include /blocks/main/main
+include /blocks/side/side
+include /blocks/filter/filter
+include /blocks/content/content
+include /blocks/article/article
+include /blocks/comments/comments
+include /blocks/related/related
+
+include /blocks/search-form/search-form
+
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'LawStock - Превосходные публикации от LawStock';
+
+block content
+	.overlay
+	+header()
+	+main().main-content
+		+hero-single()
+		.main__w.main__w_flip
+			+side().main__side
+				+filter-single()
+
+			+content().main__content
+				.main__search-form
+					+search-form()
+				//- h1.main__title Правовая биржа
+
+				+article().main__article
+				+comments().main__comments
+				+related().main__related
+
+	+footer()

@@ -1,0 +1,80 @@
+.h-user
+	position relative
+	&_active,
+	&:hover
+		.h-user__w
+			display block
+			animation fadeIn
+			animation-duration .3s
+	&__top
+		font-size 0
+		cursor pointer
+	&__pic,
+	&__name
+		display inline-block
+		vertical-align middle
+	&__pic
+		position relative
+		margin-right 19px
+		width 40px
+		height 40px
+		border-radius 50%
+		background-size cover
+		background-repeat no-repeat
+		+r($t)
+			margin-right 10px
+			width 26px
+			height 26px
+		+r($mS)
+			width 24px
+			height 24px
+	&__pic-icon
+		position absolute
+		z-index 1
+		top 0
+		right -8px
+		width 17px
+		height 16px
+		fill #fff
+		+r($m)
+			right -3px
+			width 13px
+			height 12px
+	&__name
+		font-size 14px
+		padding-right 26px
+		+r(1200px)
+			padding-right 0
+		+r($t)
+			display none
+			font-size 11px
+	&__arrow
+		position absolute
+		top 50%
+		right 0
+		width 10px
+		height 5px
+		fill #fff
+		transform translateY(-50%)
+		+r($t)
+			display none
+	&__w
+		position absolute
+		top calc(100% + 0px)
+		left 0
+		right 0
+		padding-top 12px
+		display none
+		box-shadow 0 5px 10px rgba(0,0,0,0.21)
+	&__list
+		margin-bottom 0
+		padding 10px
+		background #FFF
+		border-radius 0 0 2px 2px
+	// &__item
+
+	&__link
+		color #000
+		&:hover
+			color #000
+

@@ -1,0 +1,59 @@
+.case
+	position relative
+	padding-left 20px
+	padding-right 20px
+	padding-bottom 30px
+	padding-top 15px
+	background-color #ffffff
+	border-radius 2px
+	box-shadow 0 3px 10px rgba(0, 0, 0, 0.19)
+	&__title
+		margin-top 0
+		margin-bottom 25px
+		padding-right 40px
+		font-family $pBld
+		font-size 24px
+		letter-spacing 0.12px
+	&__fav
+		position absolute
+		top 15px
+		right 20px
+	&__meta
+		font-size 16px
+		line-height 1.875
+		color #727272
+		letter-spacing 0.16px
+	&__item
+		margin-bottom 00
+		&:last-child
+			margin-bottom 0
+	&__item-term
+		margin-left 5px
+		display inline-block
+		vertical-align top
+		&:first-child
+			margin-left 0
+	&__item-desc
+		color #000
+	&__link
+		text-decoration none
+		color #000
+		&:hover
+			color #000
+			text-decoration underline
+	&__desc
+		margin-top 60px
+	&__desc-title
+		margin-bottom 10px
+		color #727272
+		font-size 16px
+	&__text
+		margin-bottom 30px
+		@extends .wysiwyg
+		p
+			margin-top 0
+			font-size 16px
+			line-height 1.875
+	&__button-w
+		text-align center
+

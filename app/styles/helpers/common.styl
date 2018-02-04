@@ -60,8 +60,8 @@ body
 	border none
 	padding-top 15px
 	padding-bottom 16px
-	padding-left 50px
-	padding-right 50px
+	padding-left 30px
+	padding-right 30px
 	display inline-block
 	vertical-align top
 	background-color #62e2ce
@@ -95,45 +95,138 @@ body
 		background-image linear-gradient(to top, darken(rgba(9, 75, 65, 0.3), 10) 0%, darken(rgba(40, 147, 130, 0), 10) 100%), url('../images/general/button-pattern.png')
 		+r($t)
 			background-image none
+	&.button_submit
+		padding-top 10px
+		padding-right 22px
+		padding-bottom 10px
+		padding-left 22px
+		height 40px
+		font-family $pR
+		font-size 16px
+		line-height 1.3125
+		letter-spacing -0.16px
+		border-radius 20px
+		background-color #60d9c6
+		background-image none
+		text-shadow none
+		box-shadow none
+		+r($t)
+			padding-top 9px
+			padding-right 10px
+			padding-left 10px
+			padding-bottom 9px
+			background none
+			font-size 14px
+			letter-spacing -0.14px
+		&:hover,
+		&:focus
+			background-color darken(#60d9c6, 10)
+			+r($t)
+				background-color transparent
+	&.button_tight
+		padding-top 9px
+		padding-bottom 10px
+		padding-right 18px
+		padding-left 18px
+		&:hover,
+		&:focus
+			background-color darken(#60d9c6, 10)
+	&.button_wide
+		padding-top 9px
+		padding-bottom 10px
+		padding-right 32px
+		padding-left 32px
+		background-color #60d9c6
+		&:hover,
+		&:focus
+			background-color darken(#60d9c6, 10)
+			+r($t)
+				background-color darken(#60d9c6, 10)
+
+
 .wysiwyg
 	h1,
 	h2
 		margin-top 0
-		margin-bottom 50px
-		font-size 36px
-		font-weight 700
-		text-transform uppercase
-		line-height 46px
-		letter-spacing tracking(-25, 36)
-		+r($l)
-			margin-bottom 31px
-			font-size 22px
-			line-height 29px
+		font-family $pBld
+		font-size 18px
+		line-height 1.333
+		letter-spacing tracking(5,18)
 		+r($t)
-			margin-bottom 19px
-			font-size 14px
-			line-height 18px
-	h3,
-	h4
-		margin-bottom 50px
-		font-size 24px
-		font-weight 700
-		text-transform uppercase
-		letter-spacing tracking(-25, 24)
-		+r($l)
-			margin-bottom 31px
-			font-size 15px
-		+r($t)
-			margin-bottom 19px
-	ul
-		margin-left 0
-		margin-bottom 50px
-
-	p
-		margin-bottom 50px
+			font-size 16px
+			line-height 1.125
+	h2
+		margin-top 34px
+		margin-bottom 11px
 		font-size 16px
-		line-height 26px
-		letter-spacing tracking(-25, 16)
+		line-height 1.5
+		text-transform uppercase
+		letter-spacing -0.16px
+		+r($t)
+			margin-top 0
+			font-size 12px
+	.unord-list,
+	.ord-list
+		margin-left 50px
+		margin-bottom 30px
+		+r($t)
+			margin-right 0
+			margin-left 0
+		li
+			line-height 2.14285714285714
+			+r($t)
+				margin-bottom 10px
+				line-height 1.14285714285714
+	.unord-list
+		li
+			position relative
+			// margin-bottom 10px
+			padding-left 15px
+			&:after
+				position absolute
+				top 50%
+				left 0
+				width 8px
+				height 8px
+				background-color #57c6b4
+				content ""
+				border-radius 50%
+				transform translateY(-50%)
+				+r($t)
+					top 6px
+					transform translateY(0)
+	.ord-list
+		counter-reset li
+		li
+			position relative
+			padding-left 26px
+			&:after
+				position absolute
+				z-index 1
+				top 50%
+				left 0
+				width 18px
+				height 18px
+				border 1px solid #57c6b4
+				line-height 18px
+				background-color #fff
+				content counter(li)
+				counter-increment li
+				color #57C6B4
+				font-family $pBld
+				font-size 10px
+				text-align center
+				border-radius 50%
+				transform translateY(-50%)
+				+r($t)
+					top 6px
+					transform translateY(0)
+	p
+		margin-top 11px
+		margin-bottom 11px
+		font-size 14px
+		line-height 1.525
+		letter-spacing 0.14px
 		&:last-child
 			margin-bottom 0
 		+r($l)
@@ -141,3 +234,87 @@ body
 		+r($t)
 			margin-bottom 19px
 			font-size 14px
+
+	.image
+		position relative
+		margin-bottom 0
+	img
+		display block
+		max-width 100%
+		height auto
+
+	strong,
+	b
+		font-family $pBld
+		font-size 16px
+		letter-spacing -0.16px
+		+r($t)
+			font-size 14px
+
+	blockquote
+		border 3px solid #57c6b4
+		margin-top 40px
+		margin-left 50px
+		margin-right 50px
+		margin-bottom 40px
+		padding-top 33px
+		padding-right 50px
+		padding-bottom 40px
+		padding-left 50px
+		font-size 24px
+		line-height 1.333
+		letter-spacing 0.24px
+		text-align center
+		+r($t)
+			margin-top 27px
+			margin-right 0
+			margin-left 0
+			margin-bottom 27px
+			padding 12px
+		p
+			margin-bottom 0
+			color #636363
+			font-size 24px
+			line-height 1.333
+			letter-spacing 0.24px
+			+r($t)
+				margin-top 0
+				font-size 18px
+				line-height 1.22222222222222
+				letter-spacing 0.18px
+
+	.table
+		padding-right 50px
+		padding-left 50px
+		width 100%
+		+r($t)
+			padding-right 0
+			padding-left 0
+	table
+		min-width 100%
+		width 100%
+		text-align center
+
+		// table-layout fixed
+		tr
+			th
+				border-bottom 2px solid #57c6b4
+				padding-top 16px
+				padding-right 0
+				padding-bottom 16px
+				padding-left 0
+				font-family $pBld
+				font-size 16px
+				text-align center
+				+r($t)
+					padding-top 7px
+					padding-bottom 7px
+					font-size 14px
+			td
+				border-bottom 1px solid #b1b1b1
+				padding-top 16px
+				padding-right 0
+				padding-bottom 16px
+				padding-left 0
+				+r($t)
+					font-size 12px

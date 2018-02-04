@@ -1,7 +1,16 @@
 mixin hero()
-	section.hero
+	section.hero(style="background-image: url('assets/images/content/hero-bg.jpg');")
 		.hero__in
 			h1.hero__title Правовая биржа
 			.hero__text
 				p Откликайтесь на заявки и выполняйте задачи. LawStock гарантирует надёжность!
 			button.hero__button.button Оставить заявку
+
+
+mixin hero-single()
+	section.hero(style="background-image: url('assets/images/content/hero-single.jpg');")
+		.hero__in
+			h1.hero__title Превосходные публикации от LawStock
+			.hero__text
+				p Читайте самые актуальные новости или предлагайте свои идеи публикаций!
+			button.hero__button.button Предложить публикацию

@@ -1,0 +1,184 @@
+.comments
+	padding-top 20px
+	padding-left 20px
+	padding-right 20px
+	background-color #ffffff
+	border-radius 2px
+	box-shadow 0 3px 10px rgba(0, 0, 0, 0.19)
+	overflow hidden
+	+r($t)
+		padding-top 16px
+		padding-left 16px
+		padding-right 6px
+	&__title
+		margin-top 0
+		margin-bottom 34px
+		font-family $pBld
+		font-size 18px
+		letter-spacing 0.09px
+		+r($t)
+			margin-bottom 18px
+			font-size 12px
+			text-transform uppercase
+	&__w
+		position relative
+		margin-bottom 20px
+		width 100%
+		max-width 100%
+		height 418px
+	&__list
+		margin-bottom 0
+		height 100%
+		width 100%
+	// &__scroll
+	// 	position absolute
+	// 	right 0
+	// 	bottom 0
+	// 	top 5px
+	// 	width 6px
+	// 	bottom 0
+	// 	background-color #cbd3da
+	// 	border-radius 2px
+	// &__scroll-obj
+	// 	position absolute
+	// 	right 0
+	// 	width 6px
+	// 	height 108px
+	// 	border-radius 2px
+	// 	background-color #99acbc
+	&__item
+		position relative
+		margin-bottom 30px
+		padding-left 56px
+		+r($t)
+			padding-left 30px
+	&__user-pic
+		position absolute
+		top 0
+		left 0
+		display block
+		width 40px
+		height 40px
+		border-radius 50%
+		background-size cover
+		+r($t)
+			width 25px
+			height 25px
+	&__top
+		margin-bottom 10px
+	&__name,
+	&__icon
+	&__date
+		display inline-block
+		vertical-align middle
+	&__name
+		margin-right 11px
+		font-family $pBld
+		line-height 1.71428571428571
+		letter-spacing 0.07px
+		color #000
+		&:hover,
+		&:focus
+			color #000
+			text-decoration none
+	&__icon
+		width 17px
+		height 16px
+		fill #000000
+	&__date
+		color #727272
+		letter-spacing 0.13px
+	&__text
+		letter-spacing 0.14px
+	&__bottom
+		border-top 1px solid #ACB6BF
+		margin-left -20px
+		margin-right -20px
+		padding-top 14px
+		padding-bottom 14px
+		padding-left 30px
+		padding-right 20px
+		+r($l)
+			padding-right 25px
+			padding-left 15px
+	&__form
+		position relative
+		width 100%
+		display flex
+		justify-content space-between
+	&__field,
+	&__submit
+		display inline-block
+		vertical-align middle
+	&__field
+		position relative
+		margin-right 13px
+		padding-top 7px
+		padding-bottom 7px
+		width 678px
+		height 40px
+		display flex
+		justify-content space-between
+		flex-grow 1
+		font-size 0
+		border 1px solid #90a4ae
+		border-radius 1px
+		// +r($l)
+		// 	width 551px
+		+r($t)
+			margin-right 0
+			padding-top 3px
+			padding-bottom 3px
+			width 100%
+
+	&__label,
+	&__message
+		display inline-block
+		vertical-align middle
+	&__label
+		border-right 1px solid #90a4ae
+		margin-bottom 0
+		padding-top 1px
+		padding-bottom 0
+		padding-right 10px
+		padding-left 26px
+		width 19%
+		font-size 14px
+		font-family $pR
+		font-weight normal
+		cursor pointer
+		+r($l)
+			padding-left 10px
+		+r($t)
+			display none
+	&__message
+		border none
+		padding-left 6px
+		padding-right 6px
+		width 80%
+		height 100%
+		font-size 14px
+		line-height 1
+		+r($t)
+			padding-top 0
+			padding-right 80px
+			padding-bottom 0
+			width 100%
+	&__submit
+		+r($t)
+			position absolute
+			top 0
+			right 0
+			color #01927b
+			font-family "Proxima Nova"
+			font-size 14px
+			font-weight 400
+			line-height 21px
+			// Text style for "О, тправит"
+			letter-spacing -0.14px
+
+	&.comments_case
+		.comments__name
+			margin-right 2px
+		.comments__icon
+			margin-right 6px

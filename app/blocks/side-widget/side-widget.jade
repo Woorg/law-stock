@@ -1,0 +1,47 @@
+include ../icon/icon
+
+mixin side-widget-1()
+	.side-widget&attributes(attributes)
+		h2.side-widget__title Статистика
+		ul.side-widget__list
+			li.side-widget__item
+				.side-widget__item-desc Дел завершено
+					a.side-widget__link(href="#") 5
+			li.side-widget__item
+				.side-widget__item-desc Дел в процессе
+					a.side-widget__link(href="#") 2
+			li.side-widget__item
+				.side-widget__item-desc Суммарный гонорар
+					a.side-widget__link(href="#") 9500
+			li.side-widget__item
+				.side-widget__item-desc Рейтинг
+					a.side-widget__link(href="#") 100
+
+mixin side-widget-2()
+	.side-widget&attributes(attributes)
+		h2.side-widget__title Активность
+		ul.side-widget__list
+			li.side-widget__item
+				a.side-widget__link(href="#") Взято в работу Гражданское дело №838393
+			li.side-widget__item
+				a.side-widget__link(href="#") Взято в работу Гражданское дело №838393
+			li.side-widget__item
+				a.side-widget__link(href="#") Взято в работу Гражданское дело №838393
+
+
+
+mixin side-widget-3()
+	.side-widget&attributes(attributes)
+		h2.side-widget__title Казна
+		ul.side-widget__list
+			li.side-widget__item
+				.side-widget__item-desc Средства
+					a.side-widget__link(href="#") 9900
+			li.side-widget__item
+				+icon('check', true).side-widget__icon
+				a.side-widget__link(href="#") Юрист LawStock
+		.side-widget__w
+			button.side-widget__button.button.button_submit.button_submit.button_tight(type="button") Пополнить
+			button.side-widget__button.button.button_submit.button_tight(type="button") Вывести
+
+

@@ -1,0 +1,144 @@
+mixin comments()
+	.comments&attributes(attributes)
+		h2.comments__title Комментарии (17)
+		.comments__w
+			//- .comments__scroll
+				.comments__scroll-obj
+			ul.comments__list
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic.jpg');")
+					.comments__top
+						a.comments__name(href="") Евгения
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-2.jpg');")
+					.comments__top
+						a.comments__name(href="") Константин
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-3.jpg');")
+					.comments__top
+						a.comments__name(href="") Максим
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-4.jpg');")
+					.comments__top
+						a.comments__name(href="") Анатолий
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic.jpg');")
+					.comments__top
+						a.comments__name(href="") Евгения
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-2.jpg');")
+					.comments__top
+						a.comments__name(href="") Константин
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-3.jpg');")
+					.comments__top
+						a.comments__name(href="") Максим
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-4.jpg');")
+					.comments__top
+						a.comments__name(href="") Анатолий
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+
+		.comments__bottom
+			form.comments__form(action="", method="post")
+				.comments__field
+					label.comments__label(for="message") Мне кажется
+					textarea#message.comments__message(name="comment")
+				button.comments__submit.button.button_submit(type="submit") Отправить
+
+
+mixin comments-case()
+	.comments&attributes(attributes)
+		h2.comments__title Юристов откликнулось (24)
+		.comments__w
+			//- .comments__scroll
+				.comments__scroll-obj
+			ul.comments__list
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic.jpg');")
+					.comments__top
+						a.comments__name(href="") Евгения
+						+icon('check', true).comments__icon
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-2.jpg');")
+					.comments__top
+						a.comments__name(href="") Константин
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Обращайтесь выполню!
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-3.jpg');")
+					.comments__top
+						a.comments__name(href="") Максим
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p  Не представляю, кто вообще мог до такого додуматься.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-4.jpg');")
+					.comments__top
+						a.comments__name(href="") Анатолий
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic.jpg');")
+					.comments__top
+						a.comments__name(href="") Евгения
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-2.jpg');")
+					.comments__top
+						a.comments__name(href="") Константин
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-3.jpg');")
+					.comments__top
+						a.comments__name(href="") Максим
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-4.jpg');")
+					.comments__top
+						a.comments__name(href="") Анатолий
+						.comments__date 15:12 21/01/2017
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+
+		.comments__bottom
+			form.comments__form(action="", method="post")
+				.comments__field
+					label.comments__label(for="message") Мне кажется
+					textarea#message.comments__message(name="comment")
+				button.comments__submit.button.button_submit(type="submit") Отправить
