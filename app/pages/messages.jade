@@ -8,12 +8,16 @@ include /blocks/side-widget/side-widget
 
 //- include /blocks/filter/filter
 include /blocks/content/content
-include /blocks/article/article
+//- include /blocks/article/article
+include /blocks/notifications/notifications
 include /blocks/case/case
 include /blocks/comments/comments
 include /blocks/cards/cards
 include /blocks/search-form/search-form
 include /blocks/footer/footer
+
+include /blocks/icon/icon
+
 
 block head
 	- var pageTitle = 'LawStock - Подготовить документы для регистрации ООО';
@@ -30,8 +34,21 @@ block content
 
 			+content().main__content
 
-				+case().main__case
-				+comments-case().main__comments.comments_case
-				+cards-case().main__related
+				+notifications().main__notifications
+				.main__buttons
+					a.main__button.button.button_icon.button_bank(href="#link")
+						+icon('bank', true).button__icon
+						span Увеличить гонорар
+					a.main__button.button.button_icon.button_complete(href="#link")
+						+icon('check', true).button__icon
+						span Работа выполнена
+					a.main__button.button.button_icon.button_decline(href="#link")
+						+icon('refuse', true).button__icon
+						span Отказаться от исполнителя
+					a.main__button.button.button_icon.button_moderate(href="#link")
+						.button__icon
+						span Пригласить арбитра
+
+				+comments-messages().main__messages.comments_messages
 
 	+footer()

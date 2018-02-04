@@ -70,7 +70,6 @@ mixin comments()
 					textarea#message.comments__message(name="comment")
 				button.comments__submit.button.button_submit(type="submit") Отправить
 
-
 mixin comments-case()
 	.comments&attributes(attributes)
 		h2.comments__title Юристов откликнулось (24)
@@ -142,3 +141,50 @@ mixin comments-case()
 					label.comments__label(for="message") Мне кажется
 					textarea#message.comments__message(name="comment")
 				button.comments__submit.button.button_submit(type="submit") Отправить
+
+mixin comments-messages()
+	.comments&attributes(attributes)
+		//- h2.comments__title Юристов откликнулось (24)
+		.comments__head
+			.comments__client(style="background-image: url('assets/images/content/user-pic.jpg');")
+			.comments__client-name Константин Старовойцев-Куприянов
+			.comments__head-date 11 июля
+		.comments__w
+			//- .comments__scroll
+				.comments__scroll-obj
+			ul.comments__list
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic.jpg');")
+					.comments__top
+						a.comments__name(href="") Евгения
+					.comments__text
+						p Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило обвинение двум членам преступной группы, незаконно зарабатывавшим деньги на прыжках с парашютом.
+					.comments__time 15:12
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic-2.jpg');")
+					.comments__top
+						a.comments__name(href="") Константин
+					.comments__text
+						p Хорошо, я понял.
+					.comments__time 10:09
+					.comments__note-w
+						.comments__note.note.note_bank Вы подтвердили увеличение суммы гонорара на 1000 руб.
+				li.comments__item
+					a.comments__user-pic(href="" style="background-image: url('assets/images/content/user-pic.jpg');")
+					.comments__top
+						a.comments__name(href="") Евгения
+					.comments__text
+						a(href="https://ninjamock.com/s/RR521") https://ninjamock.com/s/RR521
+					.comments__time 11:34
+					.comments__note-w
+						.comments__note.note.note_moderate Вы пригласили арбитра
+						.comments__note.note.note_verdict Заключение арбитра: реституция
+						.comments__note.note.note_bank Денежные средства возвращены на счет Клиента
+		.comments__bottom
+			form.comments__form(action="", method="post")
+				.comments__field
+					label.comments__label(for="message") Я вам помогу
+					textarea#message.comments__message(name="comment")
+				.comments__buttons
+					button.comments__attach(type="button") Прикрепить файл
+					button.comments__attach.comments__attach_image(type="button") Прикрепить изображение

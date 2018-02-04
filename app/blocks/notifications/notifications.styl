@@ -1,0 +1,61 @@
+.notifications
+	position relative
+	padding-top 22px
+	padding-left 20px
+	padding-right 20px
+	padding-bottom 18px
+	background-color #ffffff
+	border-radius 2px
+	box-shadow 0 3px 10px rgba(0, 0, 0, 0.19)
+	+r($t)
+		padding-top 11px
+		padding-left 14px
+		padding-right 14px
+		padding-bottom 11px
+	&__title
+		margin-top 0
+		margin-bottom 10px
+		font-family $pBld
+		font-size 18px
+		+r($t)
+			font-size 14px
+			letter-spacing 0.07px
+	&__list
+		margin-top 0
+		margin-bottom 0
+		padding-bottom 34px
+		font-size 0
+		+r($t)
+			padding-bottom 17px
+	&__item
+		display inline-block
+		vertical-align top
+	&__text
+		font-size 14px
+		letter-spacing 0.14px
+
+	.slick-dots
+		bottom -10px
+		text-align left
+		z-index 1
+		li
+			margin 0
+		button
+			width 9px
+			height 9px
+			background-color #e6e6e6
+			border-radius 50%
+			&:before
+				display none
+	.slick-active
+		button
+			background-color #60d9c6
+	&__rating
+		position absolute
+		z-index 1
+		right 20px
+		bottom 18px
+		+r($t)
+			bottom 10px
+	.slick-dotted.slick-slider
+		margin-bottom 0

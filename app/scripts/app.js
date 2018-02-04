@@ -2,7 +2,7 @@ import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import 'jquery-mousewheel';
 import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
-// import slick from 'slick-carousel';
+import slick from 'slick-carousel';
 // import 'magnific-popup';
 // import mask from "jquery-mask-plugin";
 
@@ -197,6 +197,14 @@ import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
 			theme: "dark",
 			documentTouchScroll: true,
 			mouseWheelPixels: 200
+		});
+
+		const $notificationsList = $('.notifications__list');
+
+		$notificationsList.slick({
+			arrows: false,
+			dots: true
+			// fade: true
 		});
 
 		function pageWidget(pages) {

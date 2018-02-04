@@ -72,14 +72,35 @@
 	&__case
 		margin-bottom 18px
 		+r($t)
-			margin-bottom 8px
+			margin-bottom 20px
 	&__comments
 		margin-bottom 40px
 		+r($t)
-			margin-bottom 8px
+			margin-bottom 20px
 	&__related
 		margin-bottom 15px
 		margin-bottom 0
 
+	&__notifications
+		margin-bottom 44px
+		+r($t)
+			margin-bottom 23px
+	&__buttons
+		margin-bottom 20px
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+		text-align center
+		+r($t)
+			margin-bottom 7px
+			flex-grow 1
+			justify-content space-between
 
-
+	&__button
+		margin-right 12px
+		margin-bottom 8px
+		&:last-child
+			margin-right 0
+		+r($t)
+			margin-right 0
+			width 48%

@@ -95,6 +95,12 @@ body
 		background-image linear-gradient(to top, darken(rgba(9, 75, 65, 0.3), 10) 0%, darken(rgba(40, 147, 130, 0), 10) 100%), url('../images/general/button-pattern.png')
 		+r($t)
 			background-image none
+	&__icon
+		margin-right 10px
+		display inline-block
+		vertical-align middle
+		+r($t)
+			display none
 	&.button_submit
 		padding-top 10px
 		padding-right 22px
@@ -137,12 +143,78 @@ body
 		padding-right 32px
 		padding-left 32px
 		background-color #60d9c6
+		+r($t)
+			padding-top 11px
 		&:hover,
 		&:focus
 			background-color darken(#60d9c6, 10)
 			+r($t)
 				background-color darken(#60d9c6, 10)
 
+
+	&.button_icon
+		padding-top 0
+		padding-bottom 0
+		padding-left 16px
+		padding-right 16px
+		height 37px
+		display flex
+		align-items center
+		text-align center
+		background-color #d5f5ef
+		background-image none
+		font-size 13px
+		font-family $pBld
+		text-shadow none
+		letter-spacing 0.13px
+		border-radius 19px
+		box-shadow 0 3px 10px rgba(0, 0, 0, 0.19)
+		&:hover,
+		&:active
+			background-color darken(#d5f5ef, 10)
+		+r($t)
+			padding-left 12px
+			padding-right 12px
+			font-size 11px
+			letter-spacing 0.11px
+			text-align center
+			span
+				width 100%
+	&.button_bank
+		.button__icon
+			width 21px
+			height 21px
+	&.button_complete
+		.button__icon
+			width 17px
+			height 16px
+	&.button_decline
+		.button__icon
+			width 17px
+			height 17px
+	&.button_moderate
+		.button__icon
+			float left
+			retinaSprite($moderate_group)
+
+
+.note
+	padding-top 8px
+	padding-right 23px
+	padding-bottom 8px
+	padding-left 23px
+	display inline-block
+	vertical-align middle
+	border-radius 2px
+	letter-spacing 0.14px
+	&_bank
+		background-color #b3d3ee
+	&_moderate
+		background-color #dae5ed
+	&_verdict
+		background-color #b3eeeb
+	// &_decline
+	// 	background-color #b3d3ee
 
 .wysiwyg
 	h1,
@@ -234,6 +306,14 @@ body
 		+r($t)
 			margin-bottom 19px
 			font-size 14px
+
+	a
+
+		text-decoration none
+		color #2453a1
+		letter-spacing 0.14px
+		&:hover
+			text-decoration underline
 
 	.image
 		position relative

@@ -138,7 +138,7 @@
 	&__label
 		border-right 1px solid #90a4ae
 		margin-bottom 0
-		padding-top 1px
+		padding-top 3px
 		padding-bottom 0
 		padding-right 10px
 		padding-left 26px
@@ -182,3 +182,84 @@
 			margin-right 2px
 		.comments__icon
 			margin-right 6px
+
+	&.comments_messages
+		.comments__head
+			text-align center
+			+r($t)
+				margin-bottom 20px
+		.comments__client
+			margin auto
+			margin-bottom 8px
+			width 40px
+			height 40px
+			border-radius 50%
+
+		.comments__client-name
+			margin-bottom 40px
+			font-size 18px
+			font-family $pBld
+			line-height 1.33333333333333
+			letter-spacing 0.09px
+			+r($t)
+				margin-bottom 0
+				font-size 14px
+				letter-spacing 0.07px
+		.comments__head-date
+			margin-bottom -20px
+			color #727272
+			font-size 14px
+			letter-spacing 0.14px
+			+r($t)
+				margin-bottom 0
+		.comments__item
+			margin-top 34px
+			+r($t)
+				margin-top 0
+		.comments__top
+			+r($t)
+				margin-bottom 0
+		.comments__time
+			font-size 13px
+			color #727272
+			letter-spacing 0.13px
+		.comments__buttons
+			+r($t)
+				position absolute
+				top 0
+				right 18px
+				bottom 0
+
+	&__note-w
+		margin-top 20px
+		display flex
+		flex-direction column
+		text-align center
+		// justify-content center
+		align-items center
+	&__note
+		margin-bottom 16px
+
+	&__buttons
+		display flex
+		align-items center
+	&__attach
+		margin-left 7px
+		margin-right 15px
+		border none
+		retinaSprite($photo_group)
+		hide-text()
+		opacity 1
+		tr(all .3s ease)
+		&:last-child
+			margin-left 0
+			margin-right 0
+		&:hover
+			opacity .8
+		+r($t)
+			retinaSprite($photo_small_group)
+	&__attach_image
+		retinaSprite($attach_group)
+		+r($t)
+			retinaSprite($attach_small_group)
+
