@@ -209,8 +209,10 @@ import slick from 'slick-carousel';
 
 		const $filterActive = $('.header__trigger_filter');
 		const $catFilter = $('.cat-filter');
+		const $overlay = $('.overlay');
 		$filterActive.on('click', function() {
 			$catFilter.toggleClass('cat-filter_active');
+			$overlay.toggleClass('enable-overlay');
 		});
 
 		function pageWidget(pages) {
