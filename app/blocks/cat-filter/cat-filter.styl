@@ -20,12 +20,18 @@
 		left 0
 		opacity 1
 	&_active
-		+r($t)
+		+r(768px)
+			top 86px
+		+r(767px)
 			top 65px
+		+r($t)
+			// top 65px
 			display block
 			z-index 1001
 			opacity 1
 			transform translate(0%, 0)
 			tr(all .3s ease)
+		+r(320px)
+			top 58px
 
 
