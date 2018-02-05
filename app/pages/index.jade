@@ -22,13 +22,17 @@ block content
 		+hero()
 		.main__w
 			+side().main__side
-				+filter()
+				+filter-cat()
+
 
 			+content().main__content
 				.main__search-form
 					+search-form()
 				h1.main__title Правовая биржа
-				+cards().main__cards
+				+cards().main__cards.cards_case
 				+pagination().main__pagination
 
 	+footer()
+
+	.cat-filter
+		+filter()

@@ -6,6 +6,8 @@
 			display block
 			animation fadeIn
 			animation-duration .3s
+			+r($t)
+				display none
 		.h-user__arrow
 			transform translateY(-50%) rotate(180deg)
 			// tr(all .3s ease)
@@ -70,11 +72,13 @@
 		padding-top 12px
 		display none
 		box-shadow 0 5px 10px rgba(0,0,0,0.21)
+
 	&__list
 		margin-bottom 0
 		padding 10px
 		background #FFF
 		border-radius 0 0 2px 2px
+
 	// &__item
 
 	&__link

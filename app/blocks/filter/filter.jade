@@ -79,3 +79,49 @@ mixin filter-single()
 				li.filter__list-item
 					input#check-7.filter__checkbox(type="checkbox", value="", name="industry" checked)
 					label.filter__label(for="check-7") Административное право
+
+
+mixin filter-cat()
+	.filter&attributes(attributes)
+		.filter__item
+			button.filter__item-title(type="button") По новизне
+				+icon('arrow-down', true).filter__arrow
+		.filter__item
+			button.filter__item-title(type="button") По цене
+				+icon('arrow-down', true).filter__arrow
+
+		.filter__item
+			button.filter__item-title(type="button") По сфере
+				+icon('arrow-down', true).filter__arrow
+			ul.filter__list.filter__list_active
+				li.filter__list-item
+					input#check-10.filter__checkbox(type="checkbox", value="", name="sphere")
+					label.filter__label(for="check-10") Судебные дела
+				li.filter__list-item
+					input#check-20.filter__checkbox(type="checkbox", value="", name="sphere" checked)
+					label.filter__label(for="check-20") Документы
+		.filter__item
+			button.filter__item-title(type="button") По отрасли
+				+icon('arrow-down', true).filter__arrow
+			ul.filter__list.filter__list_active
+				li.filter__list-item
+					input#check-30.filter__checkbox(type="checkbox", value="", name="industry")
+					label.filter__label(for="check-30") Гражданское право
+				li.filter__list-item
+					input#check-40.filter__checkbox(type="checkbox", value="", name="industry" checked)
+					label.filter__label(for="check-40") Уголовное право
+				li.filter__list-item
+					input#check-50.filter__checkbox(type="checkbox", value="", name="industry")
+					label.filter__label(for="check-50") Семейное право
+				li.filter__list-item
+					input#check-60.filter__checkbox(type="checkbox", value="", name="industry" checked)
+					label.filter__label(for="check-60") Административное право
+				li.filter__list-item
+					input#check-70.filter__checkbox(type="checkbox", value="", name="industry")
+					label.filter__label(for="check-70") Трудовое право
+				li.filter__list-item
+					input#check-80.filter__checkbox(type="checkbox", value="", name="industry" checked)
+					label.filter__label(for="check-80") Земельное право
+				li.filter__list-item
+					input#check-90.filter__checkbox(type="checkbox", value="", name="industry" checked)
+					label.filter__label(for="check-90") Жилищное право

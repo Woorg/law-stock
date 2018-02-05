@@ -35,11 +35,15 @@ body
 		+r($t)
 			padding-left 5px
 			padding-right 5px
+	#sidebar-container
+		top 66px
+		+r($t)
+			top 66px
+
 	button
 		margin-bottom 0
 
-	#sidebar-container
-		top 58px
+
 .in
 	margin auto
 	padding-left 15px
@@ -126,9 +130,9 @@ body
 			letter-spacing -0.14px
 		&:hover,
 		&:focus
-			background-color darken(#60d9c6, 10)
+			background darken(#60d9c6, 10)
 			+r($t)
-				background-color transparent
+				background transparent
 	&.button_tight
 		padding-top 9px
 		padding-bottom 10px
@@ -136,20 +140,23 @@ body
 		padding-left 18px
 		&:hover,
 		&:focus
-			background-color darken(#60d9c6, 10)
+			background darken(#60d9c6, 10)
 	&.button_wide
 		padding-top 9px
 		padding-bottom 10px
 		padding-right 32px
 		padding-left 32px
-		background-color #60d9c6
+		background #60d9c6
 		+r($t)
 			padding-top 11px
+			padding-right 32px
+			padding-left 32px
+			background #60d9c6
 		&:hover,
 		&:focus
-			background-color darken(#60d9c6, 10)
+			background darken(#60d9c6, 10)
 			+r($t)
-				background-color darken(#60d9c6, 10)
+				background darken(#60d9c6, 10)
 
 
 	&.button_icon

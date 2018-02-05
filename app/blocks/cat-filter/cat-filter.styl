@@ -1,0 +1,28 @@
+.cat-filter
+	position fixed
+	z-index 4
+	overflow auto
+	top 65px
+	left 0
+	border-top 15px solid transparent
+	width 300px
+	display none
+	opacity 0
+	padding 0 15px
+	height 100%
+	background-color #e4e4e4
+	color #343838
+	transform translate(-100%, 0)
+	transition all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91)
+	will-change transform, opacity
+	&.open
+		left 0
+		opacity 1
+	&_active
+		+r($t)
+			top 65px
+			display block
+			z-index 10
+			opacity 1
+			transform translate(0%, 0)
+

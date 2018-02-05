@@ -207,6 +207,12 @@ import slick from 'slick-carousel';
 			// fade: true
 		});
 
+		const $filterActive = $('.header__trigger_filter');
+		const $catFilter = $('.cat-filter');
+		$filterActive.on('click', function() {
+			$catFilter.toggleClass('cat-filter_active');
+		});
+
 		function pageWidget(pages) {
 			var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
 			widgetWrap.prependTo("body");
