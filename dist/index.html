@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>LawStock - Фриланс-биржа юридических услуг</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page page_inner">
+		<div class="overlay"></div>
+		<section class="navbar-fixed-top navbar-fixed-shadow">
+			<header class="header">
+				<div class="container flex-container">
+					<div id="menuToggle">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div id="sidebar-container">
+						<div class="sidebar-nav bold-text">
+							<ul class="nav">
+								<li>
+									<a href="/law/">Правовая биржа</a>
+								</li>
+								<hr/>
+								<li>
+									<a href="/job/">Биржа труда</a>
+								</li>
+								<hr/>
+								<li>
+									<a href="/blog/">Новости</a>
+								</li>
+								<hr/>
+							</ul>
+						</div>
+					</div>
+					<div class="header__logo header-logo regular-text flex-container">
+						<a href="/">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 250 60"
+							 style="enable-background:new 0 0 255.1 141.7;" xml:space="preserve" class="ls-logo">
+								<g>
+									<path d="M53.4,46.9V21.3h7.8v18.8h9.7v6.8H53.4z" class="second-color"></path>
+									<path d="M84.5,46.9v-1.8c-1,1.3-3.3,2.2-5.6,2.2c-2.8,0-6.4-1.9-6.4-6.1c0-4.6,3.6-5.9,6.4-5.9c2.4,0,4.6,0.8,5.6,2								v-1.9c0-1.3-1.2-2.3-3.5-2.3c-1.7,0-3.7,0.7-5.1,1.8l-2.3-4.3c2.5-2,5.9-2.8,8.8-2.8c4.6,0,9.1,1.6,9.1,7.8v11.2H84.5z M84.5,41.8								v-1c-0.5-0.7-1.6-1-2.7-1c-1.2,0-2.4,0.4-2.4,1.5s1.3,1.5,2.4,1.5C82.8,42.8,84,42.5,84.5,41.8z"
+									 class="second-color"></path>
+									<path d="M111.8,46.9l-3-10.4l-3,10.4h-7.5l-5.4-18.5h7.1l2.5,10.2l3.3-10.2h6.2l3.2,10.2l2.5-10.2h7.1l-5.4,18.5H111.8								z"
+									 class="second-color"></path>
+									<path d="M124.3,43.3l4-5.8c1.9,1.8,4.8,3.3,8.3,3.3c1.5,0,2.8-0.4,2.8-1.4c0-2.5-14.3,0-14.3-10.1c0-4.3,3.6-8.5,10.6-8.5								c4.2,0,7.9,1.2,10.9,3.6l-4.1,5.5c-2.2-1.7-5.1-2.5-7.5-2.5c-1.5,0-2,0.5-2,1.2c0,2.4,14.2,0.3,14.2,9.9c0,5.6-4.2,8.9-11.1,8.9								C130.8,47.3,127,45.7,124.3,43.3z"
+									 class="main-color"></path>
+									<path d="M150.7,41.5v-7.2h-3.1v-6h3.1v-5.1h6.9v5.1h3.8v6h-3.8v5.2c0,1,0.6,1.7,1.5,1.7c0.6,0,1.2-0.2,1.4-0.3l1.2,5.2								c-0.7,0.7-2.3,1.2-4.7,1.2C152.9,47.3,150.7,45.4,150.7,41.5z"
+									 class="main-color"></path>
+									<path d="M162.7,37.6c0-5.2,3.8-9.7,10.4-9.7c6.6,0,10.4,4.5,10.4,9.7s-3.8,9.7-10.4,9.7C166.5,47.3,162.7,42.8,162.7,37.6z								M176.4,37.6c0-2-1.2-3.6-3.3-3.6c-2.1,0-3.3,1.6-3.3,3.6c0,2.1,1.2,3.6,3.3,3.6C175.2,41.2,176.4,39.7,176.4,37.6z"
+									 class="main-color"></path>
+									<path d="M184.8,37.6c0-5.9,4.5-9.7,10.4-9.7c4.2,0,6.8,1.9,7.9,3.5l-4.5,4.2c-0.6-0.9-1.7-1.6-3.1-1.6c-2,0-3.6,1.2-3.6,3.6								c0,2.4,1.7,3.6,3.6,3.6c1.5,0,2.5-0.8,3.1-1.6l4.5,4.2c-1,1.5-3.6,3.5-7.9,3.5C189.3,47.3,184.8,43.5,184.8,37.6z"
+									 class="main-color"></path>
+									<path d="M216.8,46.9l-3.2-6l-1.3,1.8v4.2h-6.9V21.3h6.9v13.7l4.3-6.6h8.3l-6.4,8.4l6.8,10.1H216.8z" class="main-color"></path>
+								</g>
+								<g>
+									<polygon points="33.6,9.1 8.3,33.4 21.2,33.6 39.9,15.7 	" class="main-color"></polygon>
+									<polygon points="8.4,34.7 20.7,34.7 28.1,42.5 21.8,48.6 	" class="main-color"></polygon>
+									<polygon points="41.6,17.4 24.5,33.8 37.3,33.8 47.7,23.8 	" class="main-color"></polygon>
+									<polygon points="31.8,42.9 23.7,50.7 29.8,57 44.3,43.1 	" class="main-color"></polygon>
+									<polygon points="24.7,34.7 37.2,34.8 44.2,42.1 31.8,42.1 	" class="second-color"></polygon>
+								</g>
+							</svg>
+							<span class="mobile-logo black-text">
+								<span>Law</span>Stock</span>
+						</a>
+						<span class="header-description">Фриланс-биржа юридических услуг</span>
+					</div>
+					<div class="user bold-text flex-container">
+						<div class="header__city h-city">Ваш город:
+							<a href="#city" class="h-city__link">Москва</a>
+						</div>
+						<div class="header__info-w">
+							<div class="header__info">Казна
+								<span class="header__info-val">10 000</span>
+							</div>
+							<div class="header__info">Уведомления
+								<span class="header__info-val">34</span>
+							</div>
+						</div>
+						<div class="header__user h-user">
+							<div class="h-user__top">
+								<div style="background-image: url('assets/images/content/user-pic.jpg');" class="h-user__pic">
+									<svg class="h-user__pic-icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+								</div>
+								<div class="h-user__name">Евгения М.</div>
+								<svg class="h-user__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+							</div>
+							<div class="h-user__w">
+								<ul class="h-user__list">
+									<li class="h-user__item">
+										<a href="#link" class="h-user__link">Мой профиль</a>
+									</li>
+									<li class="h-user__item">
+										<a href="#link" class="h-user__link">Личные сообщения</a>
+									</li>
+									<li class="h-user__item">
+										<a href="#link" class="h-user__link">Пополнить счет</a>
+									</li>
+									<li class="h-user__item">
+										<a href="#link" class="h-user__link">Выход</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="header__in">
+						<a href="#" class="header__button button">Оставить заявку</a>
+						<div class="header__triggers">
+							<button type="button" class="header__trigger header__trigger_filter">Фильтр</button>
+							<button type="button" class="header__trigger header__trigger_search">Поиск</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<nav class="header__nav">
+				<div class="container flex-container">
+					<ul class="bold-text navigation nav navbar-nav">
+						<li>
+							<a href="/law/">Правовая биржа</a>
+						</li>
+						<li>
+							<a href="/job/">Экспертиза</a>
+						</li>
+						<li>
+							<a href="/">Биржа труда</a>
+						</li>
+						<li>
+							<a href="/news/">Новости</a>
+						</li>
+						<li>
+							<a href="/about/">О нас</a>
+						</li>
+					</ul>
+					<a href="#" class="header__fav h-fav">
+						<svg class="h-fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>Избранное
+						<span class="h-fav__val">35</span>
+					</a>
+				</div>
+			</nav>
+		</section>
+		<main class="main main-content" role="main">
+			<section style="background-image: url('assets/images/content/hero-bg.jpg');" class="hero">
+				<div class="hero__in">
+					<h1 class="hero__title">Правовая биржа</h1>
+					<div class="hero__text">
+						<p>Откликайтесь на заявки и выполняйте задачи. LawStock гарантирует надёжность!</p>
+					</div>
+					<button class="hero__button button">Оставить заявку</button>
+				</div>
+			</section>
+			<div class="main__w">
+				<aside class="side main__side">
+					<div class="filter">
+						<div class="filter__item">
+							<button type="button" class="filter__item-title">По новизне
+								<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+							</button>
+						</div>
+						<div class="filter__item">
+							<button type="button" class="filter__item-title">По цене
+								<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+							</button>
+						</div>
+						<div class="filter__item">
+							<button type="button" class="filter__item-title">По сфере
+								<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+							</button>
+							<ul class="filter__list filter__list_active">
+								<li class="filter__list-item">
+									<input id="check-10" type="checkbox" value="" name="sphere" class="filter__checkbox" />
+									<label for="check-10" class="filter__label">Судебные дела</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-20" type="checkbox" value="" name="sphere" checked="checked" class="filter__checkbox" />
+									<label for="check-20" class="filter__label">Документы</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter__item">
+							<button type="button" class="filter__item-title">По отрасли
+								<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+							</button>
+							<ul class="filter__list filter__list_active">
+								<li class="filter__list-item">
+									<input id="check-30" type="checkbox" value="" name="industry" class="filter__checkbox" />
+									<label for="check-30" class="filter__label">Гражданское право</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-40" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+									<label for="check-40" class="filter__label">Уголовное право</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-50" type="checkbox" value="" name="industry" class="filter__checkbox" />
+									<label for="check-50" class="filter__label">Семейное право</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-60" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+									<label for="check-60" class="filter__label">Административное право</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-70" type="checkbox" value="" name="industry" class="filter__checkbox" />
+									<label for="check-70" class="filter__label">Трудовое право</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-80" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+									<label for="check-80" class="filter__label">Земельное право</label>
+								</li>
+								<li class="filter__list-item">
+									<input id="check-90" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+									<label for="check-90" class="filter__label">Жилищное право</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+				<div class="content main__content">
+					<div class="main__search-form">
+						<div class="search-form">
+							<form action="/" method="get">
+								<input type="search" value="" placeholder="Поиск по заявкам" class="search-form__input" />
+								<button type="submit" class="search-form__submit">Поиск
+									<span class="search-form__icon"></span>
+								</button>
+							</form>
+						</div>
+					</div>
+					<h1 class="main__title">Правовая биржа</h1>
+					<div class="cards main__cards cards_case">
+						<ul class="cards__list">
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_family">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">1500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_administrative">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_criminal">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_civil">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_family">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">1500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_administrative">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_civil-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+							<li class="cards__item cards__item_criminal">
+								<div class="cards__item-title">Гражданское право
+									<svg class="cards__icon"><use xlink:href="assets/images/icon.svg#icon_family-law"></use></svg>
+								</div>
+								<div class="cards__text">Северо-Западное следственное управление на транспорте (СЗ СУТ) СК РФ предъявило...</div>
+								<div class="cards__meta">
+									<div class="cards__meta-date">12/01/2017</div>
+									<div class="cards__meta-time">12:22</div>
+								</div>
+								<div class="cards__bottom">
+									<div class="cards__price">500 Р</div>
+									<button class="cards__fav fav">
+										<svg class="fav__active"><use xlink:href="assets/images/icon.svg#icon_star-active"></use></svg>
+										<svg class="fav__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+									</button>
+								</div>
+								<a href="#" class="cards__link"></a>
+							</li>
+						</ul>
+					</div>
+					<ul class="pagination main__pagination">
+						<li class="pagination__item">
+							<a href="#-1" class="pagination__link">1</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#-2" class="pagination__link">2</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#-3" class="pagination__link">3</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="footer-logo regular-text">
+					<a href="/">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 250 60"
+						 style="enable-background:new 0 0 255.1 141.7;" xml:space="preserve" class="ls-logo">
+							<g>
+								<path d="M53.4,46.9V21.3h7.8v18.8h9.7v6.8H53.4z" class="second-color"></path>
+								<path d="M84.5,46.9v-1.8c-1,1.3-3.3,2.2-5.6,2.2c-2.8,0-6.4-1.9-6.4-6.1c0-4.6,3.6-5.9,6.4-5.9c2.4,0,4.6,0.8,5.6,2							v-1.9c0-1.3-1.2-2.3-3.5-2.3c-1.7,0-3.7,0.7-5.1,1.8l-2.3-4.3c2.5-2,5.9-2.8,8.8-2.8c4.6,0,9.1,1.6,9.1,7.8v11.2H84.5z M84.5,41.8							v-1c-0.5-0.7-1.6-1-2.7-1c-1.2,0-2.4,0.4-2.4,1.5s1.3,1.5,2.4,1.5C82.8,42.8,84,42.5,84.5,41.8z"
+								 class="second-color"></path>
+								<path d="M111.8,46.9l-3-10.4l-3,10.4h-7.5l-5.4-18.5h7.1l2.5,10.2l3.3-10.2h6.2l3.2,10.2l2.5-10.2h7.1l-5.4,18.5H111.8							z"
+								 class="second-color"></path>
+								<path d="M124.3,43.3l4-5.8c1.9,1.8,4.8,3.3,8.3,3.3c1.5,0,2.8-0.4,2.8-1.4c0-2.5-14.3,0-14.3-10.1c0-4.3,3.6-8.5,10.6-8.5							c4.2,0,7.9,1.2,10.9,3.6l-4.1,5.5c-2.2-1.7-5.1-2.5-7.5-2.5c-1.5,0-2,0.5-2,1.2c0,2.4,14.2,0.3,14.2,9.9c0,5.6-4.2,8.9-11.1,8.9							C130.8,47.3,127,45.7,124.3,43.3z"
+								 class="main-color"></path>
+								<path d="M150.7,41.5v-7.2h-3.1v-6h3.1v-5.1h6.9v5.1h3.8v6h-3.8v5.2c0,1,0.6,1.7,1.5,1.7c0.6,0,1.2-0.2,1.4-0.3l1.2,5.2							c-0.7,0.7-2.3,1.2-4.7,1.2C152.9,47.3,150.7,45.4,150.7,41.5z"
+								 class="main-color"></path>
+								<path d="M162.7,37.6c0-5.2,3.8-9.7,10.4-9.7c6.6,0,10.4,4.5,10.4,9.7s-3.8,9.7-10.4,9.7C166.5,47.3,162.7,42.8,162.7,37.6z							M176.4,37.6c0-2-1.2-3.6-3.3-3.6c-2.1,0-3.3,1.6-3.3,3.6c0,2.1,1.2,3.6,3.3,3.6C175.2,41.2,176.4,39.7,176.4,37.6z"
+								 class="main-color"></path>
+								<path d="M184.8,37.6c0-5.9,4.5-9.7,10.4-9.7c4.2,0,6.8,1.9,7.9,3.5l-4.5,4.2c-0.6-0.9-1.7-1.6-3.1-1.6c-2,0-3.6,1.2-3.6,3.6							c0,2.4,1.7,3.6,3.6,3.6c1.5,0,2.5-0.8,3.1-1.6l4.5,4.2c-1,1.5-3.6,3.5-7.9,3.5C189.3,47.3,184.8,43.5,184.8,37.6z"
+								 class="main-color"></path>
+								<path d="M216.8,46.9l-3.2-6l-1.3,1.8v4.2h-6.9V21.3h6.9v13.7l4.3-6.6h8.3l-6.4,8.4l6.8,10.1H216.8z" class="main-color"></path>
+							</g>
+							<g>
+								<polygon points="33.6,9.1 8.3,33.4 21.2,33.6 39.9,15.7 	" class="main-color"></polygon>
+								<polygon points="8.4,34.7 20.7,34.7 28.1,42.5 21.8,48.6 	" class="main-color"></polygon>
+								<polygon points="41.6,17.4 24.5,33.8 37.3,33.8 47.7,23.8 	" class="main-color"></polygon>
+								<polygon points="31.8,42.9 23.7,50.7 29.8,57 44.3,43.1 	" class="main-color"></polygon>
+								<polygon points="24.7,34.7 37.2,34.8 44.2,42.1 31.8,42.1 	" class="second-color"></polygon>
+							</g>
+						</svg>
+					</a>
+					<div class="copyright-text">
+						<i class="fa fa-copyright"></i>LawStock 2017</div>
+				</div>
+				<div class="footer-nav regular-text">
+					<ul class="nav">
+						<li>
+							<a href="/privacy/">Политика конфиденциальности</a>
+						</li>
+						<li>
+							<a href="/personal_data/">Дополнительное соглашение</a>
+						</li>
+						<li>
+							<a href="/tos/">Правила сайта</a>
+						</li>
+						<li>
+							<a href="/law/">Правовая биржа</a>
+						</li>
+						<li>
+							<a href="/job/">Биржа труда</a>
+						</li>
+						<li>
+							<a href="/blog/">Новости</a>
+						</li>
+					</ul>
+				</div>
+				<div class="separated-flex">
+					<div class="footer-separated contacts">
+						<div class="separator">
+							<img src="assets/images/general/vertical_bar.png" />
+						</div>
+						<div class="flex-column">
+							<span class="title bold-text">Контакты</span>
+							<p class="separated-width regular-text">115477, г. Москва, ул. Деловая, д. 11 к. 1, офис 229</p>
+						</div>
+					</div>
+					<div class="footer-separated subscribe">
+						<div class="separator">
+							<img src="assets/images/general/vertical_bar.png" />
+						</div>
+						<div class="flex-column">
+							<span class="title bold-text">Подписаться на рассылку</span>
+							<form action="" method="POST" class="regular-text">
+								<input type="email" placeholder="Ваш email" class="separated-width ls-input" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="cat-filter">
+			<div class="filter">
+				<div class="filter__item">
+					<button type="button" class="filter__item-title">По новизне
+						<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+					</button>
+				</div>
+				<div class="filter__item">
+					<button type="button" class="filter__item-title">По цене
+						<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+					</button>
+				</div>
+				<div class="filter__item">
+					<button type="button" class="filter__item-title">По сфере
+						<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+					</button>
+					<ul class="filter__list filter__list_active">
+						<li class="filter__list-item">
+							<input id="check-1" type="checkbox" value="" name="sphere" class="filter__checkbox" />
+							<label for="check-1" class="filter__label">Судебные дела</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-2" type="checkbox" value="" name="sphere" checked="checked" class="filter__checkbox" />
+							<label for="check-2" class="filter__label">Документы</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter__item">
+					<button type="button" class="filter__item-title">По отрасли
+						<svg class="filter__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow-down"></use></svg>
+					</button>
+					<ul class="filter__list filter__list_active">
+						<li class="filter__list-item">
+							<input id="check-3" type="checkbox" value="" name="industry" class="filter__checkbox" />
+							<label for="check-3" class="filter__label">Гражданское право</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-4" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+							<label for="check-4" class="filter__label">Уголовное право</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-5" type="checkbox" value="" name="industry" class="filter__checkbox" />
+							<label for="check-5" class="filter__label">Семейное право</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-6" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+							<label for="check-6" class="filter__label">Административное право</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-7" type="checkbox" value="" name="industry" class="filter__checkbox" />
+							<label for="check-7" class="filter__label">Трудовое право</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-8" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+							<label for="check-8" class="filter__label">Земельное право</label>
+						</li>
+						<li class="filter__list-item">
+							<input id="check-9" type="checkbox" value="" name="industry" checked="checked" class="filter__checkbox" />
+							<label for="check-9" class="filter__label">Жилищное право</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="assets/scripts/jquery.min.js"></script>
+		<script src="assets/scripts/app.min.js"></script>
+	</body>
+
+</html>
